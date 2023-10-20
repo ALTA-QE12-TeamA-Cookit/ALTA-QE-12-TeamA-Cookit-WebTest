@@ -21,4 +21,16 @@ public class Cooking {
 
     @FindBy(xpath = "//button[@class='btn btn-primary sm:w-20 w-full sm:btn-sm']")
     private WebElement buttonSubmit;
+
+    public void setInputTextPost(String text) {
+        inputTextPost.sendKeys(text);
+    }
+
+    public void setInputFileImg(String pathFile) {
+        inputFileImg.sendKeys(pathFile);
+    }
+
+    public void clickButtonSubmit() {
+        buttonSubmit.click();
+    }
 }
