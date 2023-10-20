@@ -49,6 +49,12 @@ public class Recipe {
     @FindBy(xpath = "//textarea[@class='input h-20 py-2 input-primary col-span-11']")
     private WebElement inputStep;
 
+    @FindBy(xpath = "//input[@class='checkbox checkbox-primary rounded-full checkbox-sm']")
+    private WebElement checkSellBahan;
+
+    @FindBy(xpath = "//input[@id='price']")
+    private WebElement inputPrice;
+
     @FindBy(xpath = "//button[@class='btn btn-primary w-1/2 self-end mt-2']")
     private WebElement buttonSubmit;
 
@@ -98,6 +104,14 @@ public class Recipe {
 
     public void setInputStep(String step) {
         inputStep.sendKeys(step);
+    }
+
+    public void clickCheckSellBahan() {
+        checkSellBahan.click();
+    }
+
+    public void setInputPrice(String price) {
+        inputPrice.sendKeys(price);
     }
 
     public void clickButtonSubmit() {
