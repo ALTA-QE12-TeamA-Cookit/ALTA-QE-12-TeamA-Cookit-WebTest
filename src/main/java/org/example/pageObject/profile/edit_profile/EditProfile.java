@@ -14,7 +14,7 @@ public class EditProfile {
     }
 
     @FindBy(xpath = "//button[@class='justify-self-start text-2xl']")
-    private WebElement backToHome;
+    private WebElement buttonbackToHome;
 
     @FindBy(xpath = "//input[@class='border-r border-l border-t border-b border-1 border-primary outline-none rounded-md px-2 py-1']")
     private WebElement inputUsername;
@@ -39,4 +39,40 @@ public class EditProfile {
 
     @FindBy(id = "pict")
     private WebElement inputFileProfile;
+
+    public void clickButtonBackToHome() {
+        buttonbackToHome.click();
+    }
+
+    public void setInputUsername(String username) {
+        inputUsername.sendKeys(username);
+    }
+
+    public void setInputBio(String bio) {
+        inputBio.sendKeys(bio);
+    }
+
+    public void setInputCurrentPw(String currentPw) {
+        inputCurrentPw.sendKeys(currentPw);
+    }
+
+    public void setInputNewPw(String newPw) {
+        inputNewPw.sendKeys(newPw);
+    }
+
+    public void setInputConfirmPw(String confirmPw) {
+        inputConfirmPw.sendKeys(confirmPw);
+    }
+
+    public void clickButtonSave() {
+        buttonSave.click();
+    }
+
+    public void clickButtonRequest() {
+        buttonRequest.click();
+    }
+
+    public void setInputFileProfile(String pathFile) {
+        inputFileProfile.sendKeys(pathFile);
+    }
 }
