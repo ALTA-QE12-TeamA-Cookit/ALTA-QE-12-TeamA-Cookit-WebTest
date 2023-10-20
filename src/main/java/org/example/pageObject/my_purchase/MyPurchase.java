@@ -13,6 +13,8 @@ public class MyPurchase {
         webDriver = driver;
     }
 
+    // My Purchase Object
+
     @FindBy(xpath = "//div[@class='w-10/12']")
     private WebElement buttonBackToHome;
 
@@ -21,4 +23,18 @@ public class MyPurchase {
 
     @FindBy(xpath = "//span[@class='cursor-pointer']")
     private WebElement buttonCopyVA;
+
+    // My Purhcase Function
+
+    public void clickButtonHome() {
+        buttonBackToHome.click();
+    }
+
+    public void clickButtonPay() {
+        buttonPay.click();
+    }
+
+    public void clickButtonCopyVA() {
+        buttonCopyVA.click();
+    }
 }
