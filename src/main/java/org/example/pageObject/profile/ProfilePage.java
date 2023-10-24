@@ -1,15 +1,16 @@
 package org.example.pageObject.profile;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Profile {
+public class ProfilePage {
 
     public static WebDriver webDriver;
 
-    public Profile(WebDriver driver) {
+    public ProfilePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         webDriver = driver;
     }
@@ -22,7 +23,7 @@ public class Profile {
 
     //SIDEBAR ACCESS
 
-    @FindBy(xpath = "//label[@class='hidden  hover:cursor-pointer  sm:flex items-center gap-2 hover:text-secondary']")
+    @FindBy(xpath = "//div[@class='hidden dropdown dropdown-bottom sm:block ']")
     private WebElement sidebarProfile;
 
     @FindBy(xpath = "//a[.='Profile']")
@@ -49,6 +50,9 @@ public class Profile {
 
     @FindBy(xpath = "//li[@class='text-error block']")
     private WebElement buttonDelete;
+
+    @FindBy(xpath = "//button[@class='swal2-confirm swal2-styled swal2-default-outline']")
+    private WebElement buttonConfirmDelete;
 
     @FindBy(xpath = "//li[@class='block']")
     private WebElement buttonRecook;
@@ -85,7 +89,8 @@ public class Profile {
     //SIDEBAR ACCESS
 
     public void clickProfileSidebar() {
-        sidebarProfile.click();
+        JavascriptExecutor js  = (JavascriptExecutor) webDriver;
+        js.executeScript("arguments[0],click()", sidebarProfile);
     }
 
     public void clickLinkProfile() {
@@ -118,6 +123,10 @@ public class Profile {
 
     public void clickButtonDelete() {
         buttonDelete.click();
+    }
+
+    public void clickButtonConfirmDelete() {
+        buttonConfirmDelete.click();
     }
 
     public void clickButtonRecook() {
