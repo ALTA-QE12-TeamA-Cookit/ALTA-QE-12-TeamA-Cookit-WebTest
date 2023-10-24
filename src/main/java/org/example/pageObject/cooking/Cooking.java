@@ -22,7 +22,7 @@ public class Cooking {
     private WebElement inputFileImg;
 
     @FindBy(xpath = "//button[@class='btn btn-primary sm:w-20 w-full sm:btn-sm']")
-    private WebElement buttonSubmit;
+    private WebElement buttonCreateSubmit;
 
     public void setInputTextPost(String text) {
         inputTextPost.sendKeys(text);
@@ -32,8 +32,8 @@ public class Cooking {
         inputFileImg.sendKeys(pathFile);
     }
 
-    public void clickButtonSubmit() {
-        buttonSubmit.click();
+    public void clickButtonCreateSubmit() {
+        buttonCreateSubmit.click();
     }
 
     // READ
@@ -41,7 +41,35 @@ public class Cooking {
     @FindBy(xpath = "//div[@class='flex justify-self-center']/button[.='0']")
     private WebElement buttonLike;
 
+    @FindBy(xpath = "//textarea[@class='input w-full input-primary h-20 py-2 font-light']")
+    private WebElement inputComment;
+
+    @FindBy(xpath = "//label[@class='btn btn-secondary  w-full sm:w-20 sm:btn-sm flex gap-2']/input[1]")
+    private WebElement inputImgComment;
+
+    @FindBy(xpath = "//button[@class='btn btn-primary sm:w-20 w-full sm:btn-sm']")
+    private WebElement buttonSubmitComment;
+
+    @FindBy(xpath = "//p[.='sd']")
+    private WebElement resultText;
+
     public void clickButtonLike() {
         buttonLike.click();
+    }
+
+    public void setInputComment(String text){
+        inputComment.sendKeys(text);
+    }
+
+    public void setInputImgComment(String pathFile){
+        inputImgComment.sendKeys(pathFile);
+    }
+
+    public void clickButtonSubmitComment(){
+        buttonSubmitComment.click();
+    }
+
+    public String getResultText(){
+        return resultText.getText();
     }
 }
