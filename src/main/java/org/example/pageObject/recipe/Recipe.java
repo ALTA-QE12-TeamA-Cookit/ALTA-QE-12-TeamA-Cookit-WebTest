@@ -13,6 +13,8 @@ public class Recipe {
         webDriver = driver;
     }
 
+    //CREATE
+
     @FindBy(xpath = "//button[@class='justify-self-start text-2xl']")
     private WebElement buttonBackToHome;
 
@@ -118,4 +120,61 @@ public class Recipe {
         buttonSubmit.click();
     }
 
+    //READ
+
+    @FindBy(xpath = "//textarea[@class='input w-full input-primary h-20 py-2 font-light']")
+    private WebElement textAreaComment;
+
+    @FindBy(xpath = "//label[@class='btn btn-secondary  w-full sm:w-20 sm:btn-sm flex gap-2']/input[1]")
+    private WebElement inputImageComment;
+
+    @FindBy(xpath = "//button[@class='btn btn-primary sm:w-20 w-full sm:btn-sm']")
+    private WebElement buttonSubmitComment;
+
+    @FindBy(xpath = "//button[@class='btn btn-secondary w-40 justify-self-end']")
+    private WebElement buttonAddToCart;
+
+    @FindBy(xpath = "//div[@class='grid grid-cols-2 items-center font-bold']//button[@class='btn rounded-r-lg rounded-l-none text-primary text-2xl']")
+    private WebElement buttonIncreaseServing;
+
+    @FindBy(xpath = "//div[@class='grid grid-cols-2 items-center font-bold']//button[@class='btn rounded-l-lg rounded-r-none text-primary text-2xl']")
+    private WebElement buttonDecreaseServing;
+
+    @FindBy(xpath = "//div[@class='grid grid-cols-2 items-center font-bold']//button[@class='btn rounded-l-lg rounded-r-none text-primary text-2xl']")
+    private WebElement textProfileRecipe;
+
+    @FindBy(xpath = "//button[@class='btn btn-primary sm:w-20 w-full sm:btn-sm']")
+    private WebElement textProfile;
+
+    public void setInputTextAreaComment(String text) {
+        textAreaComment.sendKeys(text);
+    }
+
+    public void setInputImageComment(String pathFile) {
+        inputImageComment.sendKeys(pathFile);
+    }
+
+    public void clickButtonSubmitComment() {
+        buttonSubmitComment.click();
+    }
+
+    public void clickButtonAddToCart(){
+        buttonAddToCart.click();
+    }
+
+    public void clickButtonIncreaseServing(){
+        buttonIncreaseServing.click();
+    }
+
+    public void clickButtonDecreaseServing(){
+        buttonDecreaseServing.click();
+    }
+
+    public String getTextProfileRecipe() {
+        return textProfileRecipe.getText();
+    }
+
+    public String getTextProfile() {
+        return textProfile.getText();
+    }
 }
