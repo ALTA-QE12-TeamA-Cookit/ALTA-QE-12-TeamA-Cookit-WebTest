@@ -17,12 +17,27 @@ public class Home {
 //    Timeline Tab
 
     @When("User click on Timeline tab")
-    public void userClickOnTimelineTab() {
+    public void userClickOnTimelineTab() throws InterruptedException {
+        Thread.sleep(2000);
         homePage.clickTimelineBtn();
     }
 
     @Then("User already on Timeline tab")
-    public void userAlreadyOnTimelineTab() {
+    public void userAlreadyOnTimelineTab() throws InterruptedException {
+        Thread.sleep(2000);
         Assert.assertTrue(homePage.validateTimelineTabTittle());
+    }
+
+//    Recipes tab
+    @When("User click on Recipes tab")
+    public void userClickOnRecipesTab() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.clickRecipeTabBtn();
+    }
+
+    @Then("User already on Recipes tab")
+    public void userAlreadyOnRecipesTab() throws InterruptedException {
+        Thread.sleep(2000);
+        Assert.assertTrue(homePage.validaRecipeTabTitle());
     }
 }

@@ -36,7 +36,7 @@ public class HomePage {
     @FindBy(xpath = "//div[@class='relative min-h-screen flex flex-col w-full sm:w-2/3 lg:w-1/2 max-w-xl items-center justify-start']/div[2]//p[@class='font-light text-neutral-500']")
     private WebElement timelineTitle;
 
-    @FindBy(xpath = "//div[@class='relative min-h-screen flex flex-col w-full sm:w-2/3 lg:w-1/2 max-w-xl items-center justify-start']/div[2]//p[@class='font-light text-neutral-500']")
+    @FindBy(xpath = "//button[@class='border-b-4 py-2 border-secondary font-semibold']")
     private WebElement recipeTabTitle;
 
     @FindBy(xpath = "//button[@class='font-semibold']")
