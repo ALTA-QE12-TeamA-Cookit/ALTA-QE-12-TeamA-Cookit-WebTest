@@ -15,4 +15,4 @@ Feature: Profile
     And User click on Profile list menu
     When User click first button more on new cooking post
     And User click Delete Post
-    Then pop-up message should return "Successfuly Delete Post"
+    Then pop-up message should return "Successfuly Deleted Post"

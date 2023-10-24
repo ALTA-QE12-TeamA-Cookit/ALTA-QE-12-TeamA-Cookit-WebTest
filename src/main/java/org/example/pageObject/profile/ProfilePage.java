@@ -23,10 +23,10 @@ public class ProfilePage {
 
     //SIDEBAR ACCESS
 
-    @FindBy(xpath = "//div[@class='hidden dropdown dropdown-bottom sm:block ']")
+    @FindBy(xpath = "//div[@id='root']/div/div/div[12]/div/div/label/p")
     private WebElement sidebarProfile;
 
-    @FindBy(xpath = "//a[.='Profile']")
+    @FindBy(xpath = "//div[@id='root']/div/div/div[12]/div/div/ul/li/a")
     private WebElement linkProfile;
 
     //Following & Follower Object
@@ -89,8 +89,7 @@ public class ProfilePage {
     //SIDEBAR ACCESS
 
     public void clickProfileSidebar() {
-        JavascriptExecutor js  = (JavascriptExecutor) webDriver;
-        js.executeScript("arguments[0],click()", sidebarProfile);
+        sidebarProfile.click();
     }
 
     public void clickLinkProfile() {

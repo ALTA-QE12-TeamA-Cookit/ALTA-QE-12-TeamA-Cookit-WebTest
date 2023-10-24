@@ -20,36 +20,32 @@ public class Profile {
     @And("User click on Profile menu")
     public void userClickOnProfileMenu() throws InterruptedException {
         Thread.sleep(3000);
-
-        WebElement firstProfile = driver.findElement(By.xpath("//div[@id='root']/div/div/div[12]/div/div/label/p"));
-
-        firstProfile.click();
+        profilePage.clickProfileSidebar();
     }
 
     @And("User click on Profile list menu")
     public void userClickOnProfileListMenu() throws InterruptedException {
-        Thread.sleep(1000);
-
-        WebElement secondProfile = driver.findElement(By.xpath("//div[@id='root']/div/div/div[12]/div/div/ul/li/a"));
-
-        secondProfile.click();
-
-        Thread.sleep(7000);
+        Thread.sleep(2000);
+        profilePage.clickLinkProfile();
     }
 
     @When("User click first button more on new cooking post")
-    public void userClickFirstButtonMoreOnNewCookingPost() {
+    public void userClickFirstButtonMoreOnNewCookingPost() throws InterruptedException {
+        Thread.sleep(2000);
         profilePage.clickButtonMore();
     }
 
     @And("User click Delete Post")
-    public void userClickDeletePost() {
+    public void userClickDeletePost() throws InterruptedException {
+        Thread.sleep(2000);
         profilePage.clickButtonDelete();
+        Thread.sleep(2000);
         profilePage.clickButtonConfirmDelete();
     }
 
     @Then("pop-up message should return {string}")
-    public void popUpMessageShouldReturn(String expected) {
+    public void popUpMessageShouldReturn(String expected) throws InterruptedException {
+        Thread.sleep(1000);
         Assert.assertEquals(profilePage.getTitleAlert(), expected);
     }
 }
