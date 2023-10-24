@@ -82,3 +82,25 @@ Feature: HomePage
         And User click on Timeline tab
         When User click on Timeline photo
         Then User already on Timeline page
+
+      @Positive
+      Scenario: User go to add new cooking page
+        Given User already on Cookit landing page
+        When user click sign in button
+        And user input username "test5"
+        And input password "Test1234"
+        And click Log in button
+        And User click on new post button
+        When User click on new cooking button
+        Then User already on new cooking page
+
+      @Positive
+      Scenario: User go to add new recipes page
+        Given User already on Cookit landing page
+        When user click sign in button
+        And user input username "test5"
+        And input password "Test1234"
+        And click Log in button
+        And User click on new post button
+        When User click on new recipe button
+        Then User already on new recipe page

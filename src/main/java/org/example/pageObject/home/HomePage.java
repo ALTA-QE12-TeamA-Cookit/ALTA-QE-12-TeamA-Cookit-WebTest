@@ -54,8 +54,20 @@ public class HomePage {
     @FindBy(xpath = "//button[@class='font-semibold']")
     private WebElement recipeHeader;
 
-    @FindBy(xpath = "//p[.='New Post']")
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[12]/div/button[2]/p")
     private WebElement newPostBtn;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[12]/div[3]/a[1]")
+    private WebElement newCookingBtn;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
+    private WebElement newCookingPage;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[12]/div[3]/a[2]")
+    private WebElement newRecipesBtn;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
+    private WebElement newRecipesPage;
 
     @FindBy(xpath = "")
     private WebElement likeBtn;
@@ -139,5 +151,21 @@ public class HomePage {
 
     public boolean validateProfilePage() {
         return profilePage.isDisplayed();
+    }
+
+    public void clickNewCookingMenuBtn() {
+        newCookingBtn.click();
+    }
+
+    public  boolean validateNewCookingPage() {
+        return newCookingPage.isDisplayed();
+    }
+
+    public void clickNewRecipesMenuBtn() {
+        newRecipesBtn.click();
+    }
+
+    public  boolean validateNewRecipesPage() {
+        return newRecipesPage.isDisplayed();
     }
 }

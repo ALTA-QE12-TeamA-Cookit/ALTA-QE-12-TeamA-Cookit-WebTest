@@ -119,4 +119,34 @@ public class Home {
     @Then("User already on Timeline page")
     public void userAlreadyOnTimelinePage() {
     }
+
+    @And("User click on new post button")
+    public void userClickOnNewPostButton() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.clickNewPostBtn();
+    }
+
+    @When("User click on new cooking button")
+    public void userClickOnNewCookingButton() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.clickNewCookingMenuBtn();
+    }
+
+    @Then("User already on new cooking page")
+    public void userAlreadyOnNewCookingPage() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.validateNewCookingPage();
+    }
+
+    @When("User click on new recipe button")
+    public void userClickOnNewRecipeButton() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.clickNewRecipesMenuBtn();
+    }
+
+    @Then("User already on new recipe page")
+    public void userAlreadyOnNewRecipePage() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.validateNewRecipesPage();
+    }
 }
