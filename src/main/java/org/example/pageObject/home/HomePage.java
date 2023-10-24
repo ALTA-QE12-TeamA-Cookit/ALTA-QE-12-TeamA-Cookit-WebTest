@@ -21,17 +21,17 @@ public class HomePage {
     @FindBy(xpath = "//button[.='Recipes']")
     private WebElement recipeTabBtn;
 
-    @FindBy(xpath = "//a[@href='/search']")
+    @FindBy(xpath = "//p[.='Search']")
     private WebElement searchBtn;
 
-    @FindBy(xpath = "//div[@class='relative min-h-screen flex flex-col w-full sm:w-2/3 lg:w-1/2 max-w-xl items-center justify-start']/div[2]//div[@class='flex justify-between items-center']/button[1]")
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[3]/div[2]/div[1]/button")
     private WebElement addToCartBtn;
 
     @FindBy(xpath = "//div[@class='indicator']")
     private WebElement cartBtn;
 
-    @FindBy(xpath = "//input[@placeholder='Search Cookit']")
-    private WebElement searchField;
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div[1]/div/form/input")
+    private WebElement searchPage;
 
     @FindBy(xpath = "//div[@class='relative min-h-screen flex flex-col w-full sm:w-2/3 lg:w-1/2 max-w-xl items-center justify-start']/div[2]//p[@class='font-light text-neutral-500']")
     private WebElement timelineTitle;
@@ -42,7 +42,7 @@ public class HomePage {
     @FindBy(xpath = "//button[@class='font-semibold']")
     private WebElement cartPageTitle;
 
-    @FindBy(xpath = "//div[@class='relative min-h-screen flex flex-col w-full sm:w-2/3 lg:w-1/2 max-w-xl items-center justify-start']/div[2]//p[@class='font-semibold text-primary hover:text-accent hover:cursor-pointer']")
+    @FindBy(xpath = "//p[.='Ayam bakar goreng']")
     private WebElement recipeName;
 
     @FindBy(xpath = "//a[.='New Cooking']")
@@ -66,6 +66,15 @@ public class HomePage {
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[3]/div[2]/div[4]/div[3]")
     private WebElement threeDotsBtn;
 
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[12]/div/div/label/div/div/div/img")
+    private WebElement profileBtn;
+
+    @FindBy(xpath = "//ul[@class='dropdown-content md:text-sm menu p-2 text-black shadow-lg bg-base-100 rounded-box w-52']//a[.='Profile']")
+    private WebElement profileMenuBtn;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
+    private WebElement profilePage;
+
 //    Function Action
 
     public void clickTimelineBtn() {
@@ -88,10 +97,6 @@ public class HomePage {
         return recipeTabTitle.isDisplayed();
     }
 
-    public String getRecipeName() {
-        return recipeName.getText();
-    }
-
     public boolean getRecipeNameHeader() {
         return recipeHeader.isDisplayed();
     }
@@ -100,8 +105,8 @@ public class HomePage {
         searchBtn.click();
     }
 
-    public boolean validateSearchBtn() {
-        return searchField.isDisplayed();
+    public boolean validateSearchPage() {
+        return searchPage.isDisplayed();
     }
 
     public void addToCartBtn() {
@@ -122,5 +127,17 @@ public class HomePage {
 
     public void clickThreeDotsBtn() {
         threeDotsBtn.click();
+    }
+
+    public void clickProfileBtn() {
+        profileBtn.click();
+    }
+
+    public void clickProfileMenuBtn() {
+        profileMenuBtn.click();
+    }
+
+    public boolean validateProfilePage() {
+        return profilePage.isDisplayed();
     }
 }

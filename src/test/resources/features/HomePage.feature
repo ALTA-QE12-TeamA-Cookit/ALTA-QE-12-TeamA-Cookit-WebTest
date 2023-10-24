@@ -20,3 +20,44 @@ Feature: HomePage
   And click Log in button
   When User click on Recipes tab
   Then User already on Recipes tab
+
+    @Positive
+    Scenario: User go to recipes page
+    Given User already on Cookit landing page
+      When user click sign in button
+      And user input username "test5"
+      And input password "Test1234"
+      And click Log in button
+      When User click on Recipes name
+      Then User already on Recipes page
+
+      @Positive
+      Scenario: User go to search page
+      Given User already on Cookit landing page
+        When user click sign in button
+        And user input username "test5"
+        And input password "Test1234"
+        And click Log in button
+        And User click on Search icon
+        Then User already on Search page
+
+      @Positive
+        Scenario: User go to profile page
+          Given User already on Cookit landing page
+          When user click sign in button
+          And user input username "test5"
+          And input password "Test1234"
+          And click Log in button
+          And User click on profile icon
+          And User click on prifile menu button
+          Then User already on profile page
+
+      @Positive
+      Scenario: User add item to cart
+        Given User already on Cookit landing page
+        When user click sign in button
+        And user input username "test5"
+        And input password "Test1234"
+        And click Log in button
+        And User click add to cart icon button on home page
+        Then pop up with message "successfuly added to cart" is shown
