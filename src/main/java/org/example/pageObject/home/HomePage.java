@@ -27,7 +27,7 @@ public class HomePage {
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[3]/div[2]/div[1]/button")
     private WebElement addToCartBtn;
 
-    @FindBy(xpath = "//div[@class='indicator']")
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[12]/div/a[3]/p")
     private WebElement cartBtn;
 
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div[1]/div/form/input")

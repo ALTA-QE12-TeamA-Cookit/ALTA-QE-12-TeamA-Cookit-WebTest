@@ -99,4 +99,24 @@ public class Home {
     @Then("pop up with message {string} is shown")
     public void popUpWithMessageIsShown(String arg0) {
     }
+
+    @And("User click on Cart icon")
+    public void userClickOnCartIcon() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.clickCartMenu();
+    }
+
+    @Then("User already on Cart page")
+    public void userAlreadyOnCartPage() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.validateCartPage();
+    }
+
+    @When("User click on Timeline photo")
+    public void userClickOnTimelinePhoto() {
+    }
+
+    @Then("User already on Timeline page")
+    public void userAlreadyOnTimelinePage() {
+    }
 }
