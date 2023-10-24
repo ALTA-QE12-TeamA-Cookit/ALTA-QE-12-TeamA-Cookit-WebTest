@@ -173,4 +173,34 @@ public class Home {
         Thread.sleep(2000);
         homePage.validataNewCommentPage();
     }
+
+    @And("User click three dots icon")
+    public void userClickThreeDotsIcon() throws InterruptedException {
+        Thread.sleep(1000);
+        homePage.clickThreeDotsBtnTimelineTab();
+    }
+
+    @And("User click reply icon")
+    public void userClickReplyIcon() throws InterruptedException {
+        Thread.sleep(1000);
+        homePage.clickReplyBtnTimelineTab();
+    }
+
+    @Then("User redirected to make reply page")
+    public void userRedirectedToMakeReplyPage() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.validateReplyPageTimelineTab();
+    }
+
+    @And("User click like icon recipes tab")
+    public void userClickLikeIconRecipesTab() throws InterruptedException {
+        Thread.sleep(5000);
+        homePage.clickLikeRecipeRecipeTab();
+    }
+
+    @Then("The number of likes changes recipes tab")
+    public void theNumberOfLikesChangesRecipesTab() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.validateShowLikeRecipeRecipeTab();
+    }
 }

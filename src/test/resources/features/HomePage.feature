@@ -126,3 +126,25 @@ Feature: HomePage
       When User click on Timeline tab
       And User click comment icon
       Then User redirected to make comments page
+
+    @Positive
+    Scenario: User reply another content in timeline tab on home page
+    Given User already on Cookit landing page
+      When user click sign in button
+      And user input username "test5"
+      And input password "Test1234"
+      And click Log in button
+      When User click on Timeline tab
+      And User click three dots icon
+      And User click reply icon
+      Then User redirected to make reply page
+
+    @Positive
+    Scenario: User like content in recipes tab on home page
+      Given User already on Cookit landing page
+      When user click sign in button
+      And user input username "test5"
+      And input password "Test1234"
+      And click Log in button
+      And User click like icon recipes tab
+      Then The number of likes changes recipes tab

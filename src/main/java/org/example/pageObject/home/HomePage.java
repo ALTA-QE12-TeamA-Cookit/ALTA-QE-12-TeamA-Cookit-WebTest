@@ -81,9 +81,6 @@ public class HomePage {
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[3]/h3")
     private WebElement showNewCommentPage;
 
-    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[3]/div[2]/div[4]/div[3]")
-    private WebElement threeDotsBtn;
-
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[12]/div/div/label/div/div/div/img")
     private WebElement profileBtn;
 
@@ -92,6 +89,21 @@ public class HomePage {
 
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
     private WebElement profilePage;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[3]/div[3]/label")
+    private WebElement threeDotsBtn;
+
+    @FindBy(xpath = "//p[.='Reply']")
+    private WebElement replyMenuBtnTimelineTab;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
+    private WebElement replyPageTimelineTab;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
+    private WebElement likeRecipeBtnRecipeTab;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
+    private WebElement likeRecipeShownRecipeTab;
 
 //    Function Action
 
@@ -143,8 +155,16 @@ public class HomePage {
         newPostBtn.click();
     }
 
-    public void clickThreeDotsBtn() {
+    public void clickThreeDotsBtnTimelineTab() {
         threeDotsBtn.click();
+    }
+
+    public void clickReplyBtnTimelineTab() {
+        replyMenuBtnTimelineTab.click();
+    }
+
+    public boolean validateReplyPageTimelineTab() {
+        return replyPageTimelineTab.isDisplayed();
     }
 
     public void clickProfileBtn() {
@@ -189,5 +209,13 @@ public class HomePage {
 
     public boolean validataNewCommentPage() {
         return showNewCommentPage.isDisplayed();
+    }
+
+    public void clickLikeRecipeRecipeTab() {
+        likeBtnTimelineTab.click();
+    }
+
+    public  boolean validateShowLikeRecipeRecipeTab() {
+        return showLikeTimelineTab.isDisplayed();
     }
 }
