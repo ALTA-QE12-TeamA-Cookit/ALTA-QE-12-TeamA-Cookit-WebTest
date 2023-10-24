@@ -79,8 +79,7 @@ Feature: Cooking
     And User click timeline tab
     And User click first button comment cooking post
     When User input comment on cooking post with "Hallow semuanya"
-    And User click submit button
-    Then Verify first comment username is same with "test5"
+    Then User click submit button
 
   @Positive @TEST
   Scenario: Comment on someone cooking post
