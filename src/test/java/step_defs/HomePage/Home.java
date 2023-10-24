@@ -149,4 +149,28 @@ public class Home {
         Thread.sleep(2000);
         homePage.validateNewRecipesPage();
     }
+
+    @And("User click like icon")
+    public void userClickLikeIcon() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.clickLikePostTimelineTab();
+    }
+
+    @Then("The number of likes changes")
+    public void theNumberOfLikesChanges() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.validateShowLike();
+    }
+
+    @And("User click comment icon")
+    public void userClickCommentIcon() throws InterruptedException {
+        Thread.sleep(1000);
+        homePage.clickCommentBtnTimelineTab();
+    }
+
+    @Then("User redirected to make comments page")
+    public void userRedirectedToMakeCommentsPage() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.validataNewCommentPage();
+    }
 }

@@ -104,3 +104,25 @@ Feature: HomePage
         And User click on new post button
         When User click on new recipe button
         Then User already on new recipe page
+
+    @Positive
+    Scenario: User like content in timeline tab on home page
+      Given User already on Cookit landing page
+      When user click sign in button
+      And user input username "test5"
+      And input password "Test1234"
+      And click Log in button
+      When User click on Timeline tab
+      And User click like icon
+      Then The number of likes changes
+
+    @Positive
+    Scenario: User comment content in timeline tab on home page
+      Given User already on Cookit landing page
+      When user click sign in button
+      And user input username "test5"
+      And input password "Test1234"
+      And click Log in button
+      When User click on Timeline tab
+      And User click comment icon
+      Then User redirected to make comments page

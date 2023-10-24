@@ -69,11 +69,17 @@ public class HomePage {
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
     private WebElement newRecipesPage;
 
-    @FindBy(xpath = "")
-    private WebElement likeBtn;
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[3]/div[2]/button")
+    private WebElement likeBtnTimelineTab;
 
-    @FindBy(xpath = "")
-    private WebElement commentBtn;
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[3]/div[2]")
+    private WebElement showLikeTimelineTab;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[3]/div[1]/button")
+    private WebElement commentBtnTimelineTab;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[3]/h3")
+    private WebElement showNewCommentPage;
 
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[3]/div[2]/div[4]/div[3]")
     private WebElement threeDotsBtn;
@@ -167,5 +173,21 @@ public class HomePage {
 
     public  boolean validateNewRecipesPage() {
         return newRecipesPage.isDisplayed();
+    }
+
+    public void clickLikePostTimelineTab() {
+        likeBtnTimelineTab.click();
+    }
+
+    public  boolean validateShowLike() {
+        return showLikeTimelineTab.isDisplayed();
+    }
+
+    public void clickCommentBtnTimelineTab() {
+        commentBtnTimelineTab.click();
+    }
+
+    public boolean validataNewCommentPage() {
+        return showNewCommentPage.isDisplayed();
     }
 }
