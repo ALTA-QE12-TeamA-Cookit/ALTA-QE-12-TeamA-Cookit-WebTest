@@ -1,15 +1,16 @@
 package org.example.pageObject.profile;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Profile {
+public class ProfilePage {
 
     public static WebDriver webDriver;
 
-    public Profile(WebDriver driver) {
+    public ProfilePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         webDriver = driver;
     }
@@ -19,6 +20,14 @@ public class Profile {
 
     @FindBy(xpath = "//button[@class='justify-self-start text-2xl']")
     private WebElement buttonBackToHome;
+
+    //SIDEBAR ACCESS
+
+    @FindBy(xpath = "//div[@id='root']/div/div/div[12]/div/div/label/p")
+    private WebElement sidebarProfile;
+
+    @FindBy(xpath = "//div[@id='root']/div/div/div[12]/div/div/ul/li/a")
+    private WebElement linkProfile;
 
     //Following & Follower Object
 
@@ -41,6 +50,9 @@ public class Profile {
 
     @FindBy(xpath = "//li[@class='text-error block']")
     private WebElement buttonDelete;
+
+    @FindBy(xpath = "//button[@class='swal2-confirm swal2-styled swal2-default-outline']")
+    private WebElement buttonConfirmDelete;
 
     @FindBy(xpath = "//li[@class='block']")
     private WebElement buttonRecook;
@@ -74,6 +86,16 @@ public class Profile {
         buttonBackToHome.click();
     }
 
+    //SIDEBAR ACCESS
+
+    public void clickProfileSidebar() {
+        sidebarProfile.click();
+    }
+
+    public void clickLinkProfile() {
+        linkProfile.click();
+    }
+
     //Following & Follower Function
 
     public void clickTabFollower() {
@@ -100,6 +122,10 @@ public class Profile {
 
     public void clickButtonDelete() {
         buttonDelete.click();
+    }
+
+    public void clickButtonConfirmDelete() {
+        buttonConfirmDelete.click();
     }
 
     public void clickButtonRecook() {
