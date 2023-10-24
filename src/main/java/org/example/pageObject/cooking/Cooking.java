@@ -13,7 +13,9 @@ public class Cooking {
         webDriver = driver;
     }
 
-    @FindBy(xpath = "[Automation Web Testing] [My Purchase Page] Create page object & function")
+    //CREATE
+
+    @FindBy(xpath = "//textarea[@class='input w-full input-primary h-20 py-2 font-light']")
     private WebElement inputTextPost;
 
     @FindBy(xpath = "//label[@class='btn btn-secondary  w-full sm:w-20 sm:btn-sm flex gap-2']/input[1]")
@@ -32,5 +34,14 @@ public class Cooking {
 
     public void clickButtonSubmit() {
         buttonSubmit.click();
+    }
+
+    // READ
+
+    @FindBy(xpath = "//div[@class='flex justify-self-center']/button[.='0']")
+    private WebElement buttonLike;
+
+    public void clickButtonLike() {
+        buttonLike.click();
     }
 }
