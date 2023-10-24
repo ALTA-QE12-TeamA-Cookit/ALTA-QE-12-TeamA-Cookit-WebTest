@@ -21,7 +21,8 @@ public class SignIn {
     SignInPage signInPage = new SignInPage(driver);
 
     @Given("User already on Cookit landing page")
-    public void userAlreadyOnCookitLandingPage() {
+    public void userAlreadyOnCookitLandingPage() throws InterruptedException {
+        Thread.sleep(3000);
         Assert.assertTrue(signInPage.verifyLandingPageTitle());
     }
 
