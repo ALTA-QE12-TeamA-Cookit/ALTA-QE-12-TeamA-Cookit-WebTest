@@ -5,13 +5,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SignIn {
+public class SignInPage {
     public static WebDriver webDriver;
 
-    public SignIn(WebDriver driver) {
+    public SignInPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         webDriver = driver;
     }
+
+    @FindBy(xpath = "//h2[@id='swal2-title']")
+    private WebElement sweetAlertTitle;
+
+    @FindBy(xpath = "//h1[@class='text-2xl 2xl:text-3xl font-bold text-orange-500']")
+    private WebElement landingPageTitle;
 
     @FindBy(xpath = "//button[@class='lg:w-32 px-4 py-2 lg:py-3 text-orange-500 bg-white border2 md:font-bold 2xl:font-bold 2xl:text-xl rounded-md text-center']")
     private WebElement buttonLanding;
@@ -27,6 +33,14 @@ public class SignIn {
 
     @FindBy(xpath = "//div[@class='block alert alert-error shadow-lg']//span[.='Please enter a valid username or password..']")
     private WebElement alertInvalidInput;
+
+    public boolean verifyLandingPageTitle() {
+        return landingPageTitle.isDisplayed();
+    }
+
+    public String getSweetAlert() {
+        return sweetAlertTitle.getText();
+    }
 
     public void clickButtonLanding() {
         buttonLanding.click();

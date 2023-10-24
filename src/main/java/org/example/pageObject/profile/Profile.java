@@ -15,7 +15,7 @@ public class Profile {
     }
 
     @FindBy(xpath = "//h2[@id='swal2-title']")
-    private WebElement SweetAlertTitle;
+    private WebElement sweetAlertTitle;
 
     @FindBy(xpath = "//button[@class='justify-self-start text-2xl']")
     private WebElement buttonBackToHome;
@@ -67,7 +67,7 @@ public class Profile {
     //Function
 
     public String getTitleAlert() {
-        return SweetAlertTitle.getText();
+        return sweetAlertTitle.getText();
     }
 
     public void clickButtonBackToHome() {
