@@ -158,3 +158,25 @@ Feature: HomePage
     And click Log in button
     And User click comment icon recipes tab
     Then User redirected to make comments page recipes tab
+
+  @Positive
+  Scenario: User reply another recipes in recipes tab on home page
+    Given User already on Cookit landing page
+    When user click sign in button
+    And user input username "test5"
+    And input password "Test1234"
+    And click Log in button
+    And User click three dots icon recipe tab
+    And User click reply icon recipe page
+    Then User redirected to make reply recipe page
+
+  @Positive
+  Scenario: User recook another recipes in recipes tab on home page
+    Given User already on Cookit landing page
+    When user click sign in button
+    And user input username "test5"
+    And input password "Test1234"
+    And click Log in button
+    And User click three dots icon recipe tab
+    And User click recook icon recipe tab
+    Then User redirected to make recook page recipe tab

@@ -215,4 +215,34 @@ public class Home {
         Thread.sleep(2000);
         homePage.validateCommentRecipePage();
     }
+
+    @And("User click three dots icon recipe tab")
+    public void userClickThreeDotsIconRecipeTab() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.clickThreeDotsRecipeTab();
+    }
+
+    @And("User click reply icon recipe page")
+    public void userClickReplyIconRecipePage() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.clickReplyRecipeTabBtn();
+    }
+
+    @Then("User redirected to make reply recipe page")
+    public void userRedirectedToMakeReplyRecipePage() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.validateReplyPageRecipeTab();
+    }
+
+    @And("User click recook icon recipe tab")
+    public void userClickRecookIconRecipeTab() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.clickRecookRecipeTabBtn();
+    }
+
+    @Then("User redirected to make recook page recipe tab")
+    public void userRedirectedToMakeRecookPageRecipeTab() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.validateRecookPageRecipeTab();
+    }
 }

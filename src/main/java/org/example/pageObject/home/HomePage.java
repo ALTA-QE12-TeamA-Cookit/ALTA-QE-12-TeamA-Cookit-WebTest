@@ -111,6 +111,21 @@ public class HomePage {
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
     private WebElement commentRecipesPage;
 
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[3]/div[3]")
+    private WebElement threeDotsRecipeTab;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[3]/div[3]/ul/li[1]/p")
+    private WebElement replyBtnRecipesTab;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
+    private WebElement replyRecipeTabPage;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[3]/div[3]/ul/li[2]/p")
+    private WebElement recookBtnRecipesTab;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
+    private WebElement recookRecipeTabPage;
+
 //    Function Action
 
     public void clickTimelineBtn() {
@@ -231,5 +246,25 @@ public class HomePage {
 
     public boolean validateCommentRecipePage() {
         return commentRecipesPage.isDisplayed();
+    }
+
+    public void clickThreeDotsRecipeTab() {
+        threeDotsRecipeTab.click();
+    }
+
+    public void clickReplyRecipeTabBtn() {
+        replyBtnRecipesTab.click();
+    }
+
+    public boolean validateReplyPageRecipeTab() {
+        return replyRecipeTabPage.isDisplayed();
+    }
+
+    public void clickRecookRecipeTabBtn() {
+        recookBtnRecipesTab.click();
+    }
+
+    public boolean validateRecookPageRecipeTab() {
+        return recookRecipeTabPage.isDisplayed();
     }
 }
