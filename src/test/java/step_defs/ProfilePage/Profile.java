@@ -20,22 +20,21 @@ public class Profile {
     @And("User click on Profile menu")
     public void userClickOnProfileMenu() throws InterruptedException {
         Thread.sleep(3000);
-        WebElement tmp =driver.findElement(By.xpath("//div[@class='hidden dropdown dropdown-bottom sm:block ']"));
-        ((JavascriptExecutor)driver).executeScript("arguments[0].setAttribute('style', 'visibility:visible'); arguments[0].click();", tmp);
-        tmp.click();
+
+        WebElement firstProfile = driver.findElement(By.xpath("//div[@id='root']/div/div/div[12]/div/div/label/p"));
+
+        firstProfile.click();
     }
 
     @And("User click on Profile list menu")
     public void userClickOnProfileListMenu() throws InterruptedException {
         Thread.sleep(1000);
-        WebElement ul = driver.findElement(By.xpath("//ul[@class='dropdown-content md:text-sm menu p-2 text-black shadow-lg bg-base-100 rounded-box w-52']"));
-        ((JavascriptExecutor)driver).executeScript("arguments[0].setAttribute('style', 'visibility:visible'); arguments[0].click();", ul);
-        ul.click();
 
-        Thread.sleep(1000);
-        WebElement li = driver.findElement(By.cssSelector(".text-black > li:nth-of-type(1)"));
-        ((JavascriptExecutor)driver).executeScript("arguments[0].setAttribute('style', 'visibility:visible'); arguments[0].click();", li);
-        li.click();
+        WebElement secondProfile = driver.findElement(By.xpath("//div[@id='root']/div/div/div[12]/div/div/ul/li/a"));
+
+        secondProfile.click();
+
+        Thread.sleep(7000);
     }
 
     @When("User click first button more on new cooking post")
