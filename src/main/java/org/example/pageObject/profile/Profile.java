@@ -20,6 +20,14 @@ public class Profile {
     @FindBy(xpath = "//button[@class='justify-self-start text-2xl']")
     private WebElement buttonBackToHome;
 
+    //SIDEBAR ACCESS
+
+    @FindBy(xpath = "//label[@class='hidden  hover:cursor-pointer  sm:flex items-center gap-2 hover:text-secondary']")
+    private WebElement sidebarProfile;
+
+    @FindBy(xpath = "//a[.='Profile']")
+    private WebElement linkProfile;
+
     //Following & Follower Object
 
     @FindBy(xpath = "//p[.='0 Followers']")
@@ -72,6 +80,16 @@ public class Profile {
 
     public void clickButtonBackToHome() {
         buttonBackToHome.click();
+    }
+
+    //SIDEBAR ACCESS
+
+    public void clickProfileSidebar() {
+        sidebarProfile.click();
+    }
+
+    public void clickLinkProfile() {
+        linkProfile.click();
     }
 
     //Following & Follower Function
