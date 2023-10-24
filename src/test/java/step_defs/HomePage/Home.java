@@ -203,4 +203,16 @@ public class Home {
         Thread.sleep(2000);
         homePage.validateShowLikeRecipeRecipeTab();
     }
+
+    @And("User click comment icon recipes tab")
+    public void userClickCommentIconRecipesTab() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.clickCommentRecipeTab();
+    }
+
+    @Then("User redirected to make comments page recipes tab")
+    public void userRedirectedToMakeCommentsPageRecipesTab() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.validateCommentRecipePage();
+    }
 }

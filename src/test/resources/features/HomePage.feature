@@ -148,3 +148,13 @@ Feature: HomePage
       And click Log in button
       And User click like icon recipes tab
       Then The number of likes changes recipes tab
+
+  @Positive
+  Scenario: User comment content in recipes tab on home page
+    Given User already on Cookit landing page
+    When user click sign in button
+    And user input username "test5"
+    And input password "Test1234"
+    And click Log in button
+    And User click comment icon recipes tab
+    Then User redirected to make comments page recipes tab

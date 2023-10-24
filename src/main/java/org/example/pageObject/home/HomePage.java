@@ -105,6 +105,12 @@ public class HomePage {
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
     private WebElement likeRecipeShownRecipeTab;
 
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[3]/div[1]/button")
+    private WebElement commentRecipe;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
+    private WebElement commentRecipesPage;
+
 //    Function Action
 
     public void clickTimelineBtn() {
@@ -215,7 +221,15 @@ public class HomePage {
         likeBtnTimelineTab.click();
     }
 
-    public  boolean validateShowLikeRecipeRecipeTab() {
+    public boolean validateShowLikeRecipeRecipeTab() {
         return showLikeTimelineTab.isDisplayed();
+    }
+
+    public void clickCommentRecipeTab() {
+        commentRecipe.click();
+    }
+
+    public boolean validateCommentRecipePage() {
+        return commentRecipesPage.isDisplayed();
     }
 }
