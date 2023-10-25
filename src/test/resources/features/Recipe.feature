@@ -51,7 +51,7 @@ Feature: Recipe
     Then validate title recipe is "Ayam bakar goreng"
     And validate "ADD TO CART" button is displayed
 
-  @Positive
+  @Positive @TEST
   Scenario: Edit post on recipe with valid value and verified user
     Given User already on Cookit landing page
     When user click sign in button
@@ -76,7 +76,7 @@ Feature: Recipe
     And user click add button on direction section
     And user click remove button on direction section
     And user input on field price with "50000"
-    And user click submit
+    And user click submit on recipe page
     Then validate title recipe is "Ayam bakar goreng edit"
     And validate "ADD TO CART" button is displayed
 
