@@ -119,11 +119,15 @@ public class Home {
     }
 
     @When("User click on Timeline photo")
-    public void userClickOnTimelinePhoto() {
+    public void userClickOnTimelinePhoto() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.clickPostBtnTimelineTab();
     }
 
     @Then("User already on Timeline page")
-    public void userAlreadyOnTimelinePage() {
+    public void userAlreadyOnTimelinePage() throws InterruptedException {
+        Thread.sleep(2000);
+        homePage.verifyPostPageTimelineTab();
     }
 
     @And("User click on new post button")
