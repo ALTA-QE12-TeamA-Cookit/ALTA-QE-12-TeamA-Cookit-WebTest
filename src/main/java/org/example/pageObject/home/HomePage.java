@@ -45,12 +45,6 @@ public class HomePage {
     @FindBy(xpath = "//p[.='Ayam bakar goreng']")
     private WebElement recipeName;
 
-    @FindBy(xpath = "//a[.='New Cooking']")
-    private WebElement postNewCookingBtn;
-
-    @FindBy(xpath = "//a[.='New Recipe']")
-    private WebElement postNewRecipeBtn;
-
     @FindBy(xpath = "//button[@class='font-semibold']")
     private WebElement recipeHeader;
 
@@ -69,13 +63,13 @@ public class HomePage {
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
     private WebElement newRecipesPage;
 
-    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[3]/div[2]/button")
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[4]/div[2]/button")
     private WebElement likeBtnTimelineTab;
 
-    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[3]/div[2]")
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[4]/div[2]")
     private WebElement showLikeTimelineTab;
 
-    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[3]/div[1]/button")
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[4]/div[1]/button")
     private WebElement commentBtnTimelineTab;
 
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[3]/h3")
@@ -90,7 +84,7 @@ public class HomePage {
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
     private WebElement profilePage;
 
-    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[3]/div[3]/label")
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[4]/div[3]")
     private WebElement threeDotsBtn;
 
     @FindBy(xpath = "//p[.='Reply']")
@@ -99,34 +93,41 @@ public class HomePage {
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
     private WebElement replyPageTimelineTab;
 
-    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[4]/div[2]/button")
     private WebElement likeRecipeBtnRecipeTab;
 
-    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[4]/div[2]")
     private WebElement likeRecipeShownRecipeTab;
 
-    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[3]/div[1]/button")
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[4]/div[1]/button")
     private WebElement commentRecipe;
 
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
     private WebElement commentRecipesPage;
 
-    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[3]/div[3]")
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[4]/div[3]")
     private WebElement threeDotsRecipeTab;
 
-    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[3]/div[3]/ul/li[1]/p")
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[4]/div[3]/ul/li[1]")
     private WebElement replyBtnRecipesTab;
 
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
     private WebElement replyRecipeTabPage;
 
-    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[3]/div[3]/ul/li[2]/p")
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[4]/div[3]/ul/li[2]")
     private WebElement recookBtnRecipesTab;
 
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
     private WebElement recookRecipeTabPage;
 
+    @FindBy(xpath = "//h2[@id='swal2-title']")
+    private WebElement popUpAlertTitle;
+
 //    Function Action
+
+    public String getPopUpTitleAlert() {
+        return popUpAlertTitle.getText();
+    }
 
     public void clickTimelineBtn() {
         timeLineTabBtn.click();
@@ -233,11 +234,11 @@ public class HomePage {
     }
 
     public void clickLikeRecipeRecipeTab() {
-        likeBtnTimelineTab.click();
+        likeRecipeBtnRecipeTab.click();
     }
 
     public boolean validateShowLikeRecipeRecipeTab() {
-        return showLikeTimelineTab.isDisplayed();
+        return likeRecipeShownRecipeTab.isDisplayed();
     }
 
     public void clickCommentRecipeTab() {

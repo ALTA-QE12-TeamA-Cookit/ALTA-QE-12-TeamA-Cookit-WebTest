@@ -5,7 +5,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.pageObject.home.HomePage;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import step_defs.Hooks;
 
 public class Home {
@@ -97,7 +100,10 @@ public class Home {
     }
 
     @Then("pop up with message {string} is shown")
-    public void popUpWithMessageIsShown(String arg0) {
+    public void popUpWithMessageIsShown(String message) {
+        WebDriverWait w = new WebDriverWait(driver, 3);
+        w.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h2[@id='swal2-title']")));
+        Assert.assertEquals(homePage.getPopUpTitleAlert(), message);
     }
 
     @And("User click on Cart icon")
