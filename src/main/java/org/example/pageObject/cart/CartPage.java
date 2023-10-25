@@ -70,6 +70,25 @@ public class CartPage {
     @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/h1[1]")
     private WebElement detailPurchasePage;
 
+//    User received the order on my purchase page
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[12]/div[1]/div[1]/ul[1]/li[2]/a[1]")
+    private WebElement myPurchaseMenuBtn;
+
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/h1[1]")
+    private WebElement myPurchasePage;
+
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/p[1]")
+    private WebElement receiveTabBtn;
+
+    @FindBy(xpath = "//p[text()='Ayam bakar goreng edit']")
+    private WebElement productName;
+
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[3]/div[1]/div[3]/button[1]")
+    private WebElement orderReceiveBtn;
+
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[4]/p[1]")
+    private WebElement completeTab;
+
 //    ============================================================================================
 
     //    user checkout item
@@ -152,5 +171,35 @@ public class CartPage {
 
     public boolean verifyDetailPurchasePage() {
         return detailPurchasePage.isDisplayed();
+    }
+
+    //    User received the order on my purchase page
+
+    public void clickPurchaseMenuBtn() {
+        myPurchaseMenuBtn.click();
+    }
+
+    public boolean verifyMyPurchasePage() {
+        return myPurchasePage.isDisplayed();
+    }
+
+    public void clickReceivedTabBtn() {
+        receiveTabBtn.click();
+    }
+
+    public String verifyProductName() {
+        return productName.getText();
+    }
+
+    public void clickOrderReceiveBtn() {
+        orderReceiveBtn.click();
+    }
+
+    public void clickCompleteTabBtn() {
+        completeTab.click();
+    }
+
+    public boolean verifyCompleteTabPage() {
+        return completeTab.isDisplayed();
     }
 }

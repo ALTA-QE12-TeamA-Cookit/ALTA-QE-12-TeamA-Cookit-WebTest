@@ -73,3 +73,18 @@ Feature: CartPage
     And User click confirm button
     Then Pop up with message "Successfull Order" is shown
     And User redirect to detail purchase page
+
+  @positive
+  Scenario: User recieved the order on my purchase page
+    Given User already on Cookit landing page
+    When user click sign in button
+    And user input username "kamui123"
+    And input password "Kamui123"
+    And click Log in button
+    And User click on profile icon
+    And User click my purchase menu
+    When User already on my purchase page
+    And User click on recieved tab
+    And User click Order Recieved button on selected product
+    And User click complete tab
+    Then Recieved product has shown on complete tab

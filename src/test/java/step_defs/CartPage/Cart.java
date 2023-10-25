@@ -129,4 +129,42 @@ public class Cart {
         Thread.sleep(3000);
         Assert.assertTrue(cartPage.verifyDetailPurchasePage());
     }
+
+//    User received the order on my purchase page
+
+    @And("User click my purchase menu")
+    public void userClickMyPurchaseMenu() throws InterruptedException {
+        Thread.sleep(1500);
+        cartPage.clickPurchaseMenuBtn();
+    }
+
+    @When("User already on my purchase page")
+    public void userAlreadyOnMyPurchasePage() throws InterruptedException {
+        Thread.sleep(1500);
+        Assert.assertTrue(cartPage.verifyMyPurchasePage());
+    }
+
+    @And("User click on recieved tab")
+    public void userClickOnRecievedTab() throws InterruptedException {
+        Thread.sleep(1500);
+        cartPage.clickReceivedTabBtn();
+    }
+
+    @And("User click Order Recieved button on selected product")
+    public void userClickOrderRecievedButtonOnSelectedProduct() throws InterruptedException {
+        Thread.sleep(1500);
+        cartPage.clickOrderReceiveBtn();
+    }
+
+    @And("User click complete tab")
+    public void userClickCompleteTab() throws InterruptedException {
+        Thread.sleep(1500);
+        cartPage.clickCompleteTabBtn();
+    }
+
+    @Then("Recieved product has shown on complete tab")
+    public void recievedProductHasShownOnCompleteTab() throws InterruptedException {
+        Thread.sleep(1500);
+        Assert.assertTrue(cartPage.verifyCompleteTabPage());
+    }
 }
