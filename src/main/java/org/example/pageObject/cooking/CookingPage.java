@@ -19,6 +19,9 @@ public class CookingPage {
 
     //CREATE
 
+    @FindBy(xpath = "//h2[@id='swal2-title']")
+    private WebElement sweetAlertText;
+
     @FindBy(css = ".input")
     private WebElement inputTextPost;
 
@@ -34,7 +37,7 @@ public class CookingPage {
     @FindBy(xpath = "//a[.='New Cooking']")
     private WebElement buttonNewCooking;
 
-    @FindBy(xpath = "//button[@class='border-b-4 py-2 border-secondary font-semibold']")
+    @FindBy(xpath = "//button[.='Timeline']")
     private WebElement tabTimeline;
 
     public void setInputTextPost(String text) {
@@ -44,6 +47,10 @@ public class CookingPage {
     public void setInputFileImg(String pathFile) {
         ((JavascriptExecutor)webDriver).executeScript("arguments[0].setAttribute('style', 'visibility:visible'); arguments[0].setAttribute('style', 'display:block');", inputFileImg);
         inputFileImg.sendKeys(pathFile);
+    }
+
+    public void clickTabTimeline() {
+        tabTimeline.click();
     }
 
     public void clickButtonCreateSubmit() {

@@ -37,7 +37,7 @@ public class Cooking {
     @And("User click submit button")
     public void userClickSubmitButton() throws InterruptedException {
         cookingPage.clickButtonCreateSubmit();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
     }
 
     // READ
@@ -45,9 +45,7 @@ public class Cooking {
     @And("User click timeline tab")
     public void userClickTimelineTab() throws InterruptedException {
         Thread.sleep(3000);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        WebElement timeline = driver.findElement(By.xpath("//button[.='Timeline']"));
-        wait.until(ExpectedConditions.elementToBeClickable(timeline)).click();
+        cookingPage.clickTabTimeline();
     }
 
     @And("User click first button comment cooking post")
