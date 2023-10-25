@@ -52,3 +52,24 @@ Feature: CartPage
     And User click minus icon for adding more quantity product
     Then quantity product change value
 
+  @positive
+  Scenario: User place order item on cart page
+    Given User already on Cookit landing page
+    When user click sign in button
+    And user input username "test5"
+    And input password "Test1234"
+    And click Log in button
+    And User click on add to cart icon
+    And User click on Cart icon
+    And User click checkbox on selected item
+    And User verify total price
+    And User click checkout button
+    Then User already on payment page
+    And User click delivery option GO FOOD
+    And User click payment option
+    And User click Bank BCA
+    And User click Place Order button
+    And User input "Test1234" as password
+    And User click confirm button
+    Then Pop up with message "Successfull Order" is shown
+    And User redirect to detail purchase page

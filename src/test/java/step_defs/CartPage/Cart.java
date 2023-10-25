@@ -2,6 +2,7 @@ package step_defs.CartPage;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.example.pageObject.cart.CartPage;
 import org.example.pageObject.home.HomePage;
 import org.junit.Assert;
@@ -75,6 +76,57 @@ public class Cart {
     //  reduce quantity
     @And("User click minus icon for adding more quantity product")
     public void userClickMinusIconForAddingMoreQuantityProduct() {
+        cartPage.clickReduceQtyBtn();
+    }
 
+    //    User place order item on cart page
+    @And("User click delivery option GO FOOD")
+    public void userClickDeliveryOptionGOFOOD() throws InterruptedException {
+        Thread.sleep(1500);
+        cartPage.clickDelivOptionBtn();
+    }
+
+    @And("User click payment option")
+    public void userClickPaymentOption() throws InterruptedException {
+        Thread.sleep(1500);
+        cartPage.clickPaymentOptBtn();
+    }
+
+    @And("User click Bank BCA")
+    public void userClickBankBCA() throws InterruptedException {
+        Thread.sleep(1500);
+        cartPage.clickBankOptBtn();
+    }
+
+    @And("User click Place Order button")
+    public void userClickPlaceOrderButton() throws InterruptedException {
+        Thread.sleep(1500);
+        cartPage.clickPlaceOrderBtn();
+    }
+
+    @And("User input {string} as password")
+    public void userInputAsPassword(String inputConfirmPass) throws InterruptedException {
+        Thread.sleep(3000);
+        cartPage.inputPasswordConfirm(inputConfirmPass);
+    }
+
+    @And("User click confirm button")
+    public void userClickConfirmButton() throws InterruptedException {
+        Thread.sleep(3000);
+        cartPage.clickConfirmPassBtn();
+    }
+
+    @Then("Pop up with message {string} is shown")
+    public void popUpWithMessageIsShown(String message) throws InterruptedException {
+        Thread.sleep(3000);
+        WebDriverWait w = new WebDriverWait(driver, 5);
+        w.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h2[@id='swal2-title']")));
+        Assert.assertEquals(cartPage.getPopUpTitleAlert(), message);
+    }
+
+    @And("User redirect to detail purchase page")
+    public void userRedirectToDetailPurchasePage() throws InterruptedException {
+        Thread.sleep(3000);
+        Assert.assertTrue(cartPage.verifyDetailPurchasePage());
     }
 }

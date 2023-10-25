@@ -48,6 +48,28 @@ public class CartPage {
     @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/p[1]")
     private WebElement reduceProductQty;
 
+//    User place order item on cart page
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/img[1]")
+    private WebElement gofoodDeliveryOptionBtn;
+
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/label[1]/p[1]")
+    private WebElement paymentOptionBtn;
+
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[3]/div[1]/div[1]/label[2]")
+    private WebElement bankBcaBtn;
+
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/div[2]/label[1]")
+    private WebElement placeOrderBtn;
+
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/div[3]/div[1]/div[1]/input[1]")
+    private WebElement inputPasswordForm;
+
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[2]/div[1]/div[3]/div[1]/div[2]/label[2]")
+    private WebElement confirmPassBtn;
+
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/h1[1]")
+    private WebElement detailPurchasePage;
+
 //    ============================================================================================
 
     //    user checkout item
@@ -90,8 +112,6 @@ public class CartPage {
 
 //    User add more quantity item on cart page
 
-//    public void click
-
     public void addMoreQty() {
         addMoreItemBtn.click();
     }
@@ -103,5 +123,34 @@ public class CartPage {
 //    User add reduce quantity item on cart page
     public void clickReduceQtyBtn() {
         reduceProductQty.click();
+    }
+
+//    User place order item on cart page
+    public void clickDelivOptionBtn() {
+        gofoodDeliveryOptionBtn.click();
+    }
+
+    public void clickPaymentOptBtn() {
+        paymentOptionBtn.click();
+    }
+
+    public void clickBankOptBtn() {
+        bankBcaBtn.click();
+    }
+
+    public void inputPasswordConfirm(String inputPassword) {
+        inputPasswordForm.sendKeys(inputPassword);
+    }
+
+    public void clickPlaceOrderBtn() {
+        placeOrderBtn.click();
+    }
+
+    public void clickConfirmPassBtn() {
+        confirmPassBtn.click();
+    }
+
+    public boolean verifyDetailPurchasePage() {
+        return detailPurchasePage.isDisplayed();
     }
 }
