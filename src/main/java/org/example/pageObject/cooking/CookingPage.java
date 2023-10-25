@@ -28,7 +28,7 @@ public class CookingPage {
     @FindBy(xpath = "//label[@class='btn btn-secondary  w-full sm:w-20 sm:btn-sm flex gap-2']/input[1]")
     private WebElement inputFileImg;
 
-    @FindBy(xpath = "//button[@class='btn btn-primary sm:w-20 w-full sm:btn-sm']")
+    @FindBy(css = ".btn-primary")
     private WebElement buttonCreateSubmit;
 
     @FindBy(xpath = "//button[.='New Post']")

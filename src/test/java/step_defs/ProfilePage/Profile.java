@@ -144,4 +144,21 @@ public class Profile {
         Thread.sleep(2000);
         Assert.assertEquals(profilePage.getTextButtonFollow(), "Unfollow");
     }
+
+    @And("User click button more on another profile page")
+    public void userClickButtonMoreOnAnotherProfilePage() throws InterruptedException {
+        Thread.sleep(2000);
+        profilePage.clickButtonMoreOnProfile();
+    }
+
+    @And("User click recooked button")
+    public void userClickRecookedButton() {
+        profilePage.clickButtonRecook();
+    }
+
+    @Then("Verify status recooked is displayed")
+    public void verifyStatusRecookedIsDisplayed() throws InterruptedException {
+        Thread.sleep(2000);
+        Assert.assertTrue(profilePage.getTextHeaderOnRecipePage());
+    }
 }
