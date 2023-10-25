@@ -152,7 +152,8 @@ public class Profile {
     }
 
     @And("User click recooked button")
-    public void userClickRecookedButton() {
+    public void userClickRecookedButton() throws InterruptedException {
+        Thread.sleep(1000);
         profilePage.clickButtonRecook();
     }
 

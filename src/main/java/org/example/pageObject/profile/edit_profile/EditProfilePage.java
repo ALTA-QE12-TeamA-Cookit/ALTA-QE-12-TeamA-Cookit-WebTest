@@ -1,5 +1,6 @@
 package org.example.pageObject.profile.edit_profile;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -37,11 +38,19 @@ public class EditProfilePage {
     @FindBy(xpath = "//button[@class='w-24 lg:w-32 py-1 rounded-md place-self-center bg-secondary text-white']")
     private WebElement buttonSave;
 
-    @FindBy(xpath = "//button[@class='w-24 lg:w-32 py-1 rounded-md place-self-center bg-secondary text-white']")
+    @FindBy(xpath = "//*[@id=\"skills \"]/div/div/div/button")
     private WebElement buttonRequest;
+
+    @FindBy(xpath = "//input[@id='pict']")
+    private WebElement inputFileEditProfile;
 
     @FindBy(id = "pict")
     private WebElement inputFileProfile;
+
+    public void clickInputFileEditProfile(String pathFile){
+        ((JavascriptExecutor)webDriver).executeScript("arguments[0].setAttribute('style', 'visibility:visible'); arguments[0].setAttribute('style', 'display:block');arguments[0].classList.remove(hidden);", inputFileProfile);
+        inputFileProfile.sendKeys(pathFile);
+    }
 
     public void clickEditProfileButton(){
         buttonEditProfile.click();
