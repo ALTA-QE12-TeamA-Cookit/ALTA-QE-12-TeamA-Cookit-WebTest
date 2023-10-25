@@ -31,7 +31,7 @@ Feature: Profile
     Then Verify like value is "1"
 
   @positive
-  Scenario: Create comment new cooking post from profile page
+  Scenario: Verify user already on cooking page
     Given User already on Cookit landing page
     When user click sign in button
     And user input username "test5"
