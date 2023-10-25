@@ -18,6 +18,9 @@ public class ProfilePage {
     @FindBy(xpath = "//h2[@id='swal2-title']")
     private WebElement sweetAlertTitle;
 
+    @FindBy(xpath = "//div[@class='swal2-html-container']")
+    private WebElement sweetAlertBody;
+
     @FindBy(xpath = "//button[@class='justify-self-start text-2xl']")
     private WebElement buttonBackToHome;
 
@@ -31,19 +34,22 @@ public class ProfilePage {
 
     //Following & Follower Object
 
-    @FindBy(xpath = "//p[.='0 Followers']")
+    @FindBy(css = ".grid-cols-2 > p:nth-of-type(1)")
     private WebElement tabFollower;
 
-    @FindBy(xpath = "//p[.='1 Following']")
+    @FindBy(css = ".grid-cols-2 > p:nth-of-type(2)")
     private WebElement tabFollowing;
 
     //General Object
 
-    @FindBy(xpath = "//button[@class='flex items-center gap-1 hover:text-accent hover:cursor-pointer']")
+    @FindBy(css = ".max-w-xl div:nth-of-type(3) > .justify-self-start > .flex")
     private  WebElement buttonComment;
-
+//.max-w-xl div:nth-of-type(3) > .justify-self-start > .flex
     @FindBy(xpath = "//div[@class='flex justify-self-center']/button[.='0']")
     private WebElement buttonLike;
+
+    @FindBy(xpath = "//button[.='1']")
+    private WebElement buttonLikeAfter;
 
     @FindBy(xpath = "//label[@class='flex items-center gap-1 hover:text-accent hover:cursor-pointer']")
     private WebElement buttonMore;
@@ -57,7 +63,7 @@ public class ProfilePage {
     @FindBy(xpath = "//li[@class='block']")
     private WebElement buttonRecook;
 
-    @FindBy(xpath = "//p[@class='font-light text-neutral-500']")
+    @FindBy(xpath = "//button[@class='font-semibold']")
     private WebElement textPostCategory;
 
     //Recipe Object
@@ -65,7 +71,7 @@ public class ProfilePage {
     @FindBy(xpath = "//div[@class='w-10/12']")
     private WebElement openRecipeElement;
 
-    @FindBy(xpath = "//div[@class='flex justify-between items-center']/button[1]")
+    @FindBy(css = ".max-w-xl > div:nth-of-type(3) > div > .flex > button")
     private WebElement buttonAddToCart;
 
     //Another Profile Object
@@ -76,7 +82,52 @@ public class ProfilePage {
     @FindBy(xpath = "//h1[@class='font-bold col-span-2 text-xl md:text-xl flex']")
     private WebElement anotherUsername;
 
+
+
+    @FindBy(xpath = "//button[@class='btn btn-primary w-1/2 self-end mt-2']")
+    private WebElement buttonSubmitOnRecookPage;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[3]/div[2]/div[2]/div/div[1]/div[1]")
+    private WebElement imgProfileOnProfilePage;
+
+    @FindBy(xpath = "//h1[@class='font-bold col-span-2 text-xl md:text-xl flex']")
+    private WebElement textUsernameOnProfilePage;
+
+    @FindBy(css = ".max-w-xl > div:nth-of-type(2) .h-0")
+    private WebElement imgFirstProfileOnTimeline;
+
+    @FindBy(css = ".px-2 > div:nth-of-type(1) > .place-self-end")
+    private WebElement buttonUnfollow;
+
     //Function
+
+    public String getTextButtonFollow(){
+        return buttonFollow.getText();
+    }
+
+    public void clickButtonUnfollow(){
+        buttonUnfollow.click();
+    }
+
+    public String getSweetAlertBodyText(){
+        return sweetAlertBody.getText();
+    }
+
+    public void clickImgFirstProfileOnTimeline(){
+        imgFirstProfileOnTimeline.click();
+    }
+
+    public String getTextUsernameOnProfilePage(){
+        return textUsernameOnProfilePage.getText();
+    }
+
+    public void clickImgProfileOnProfilePage(){
+        imgProfileOnProfilePage.click();
+    }
+
+    public void clickButtonSubmitOnRecookPage(){
+        buttonSubmitOnRecookPage.click();
+    }
 
     public String getTitleAlert() {
         return sweetAlertTitle.getText();
@@ -134,6 +185,10 @@ public class ProfilePage {
 
     public String getTextPostCategory(){
         return textPostCategory.getText();
+    }
+
+    public String getLikeCountOnProfilePage(){
+        return buttonLikeAfter.getText();
     }
 
     //Recipe Function
