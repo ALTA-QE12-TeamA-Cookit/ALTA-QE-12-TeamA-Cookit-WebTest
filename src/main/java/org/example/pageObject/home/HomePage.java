@@ -123,6 +123,12 @@ public class HomePage {
     @FindBy(xpath = "//h2[@id='swal2-title']")
     private WebElement popUpAlertTitle;
 
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/div[2]/div[2]/img")
+    private WebElement postBtnTimelineTab;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/button[2]")
+    private WebElement postPageVerif;
+
 //    Function Action
 
     public String getPopUpTitleAlert() {
@@ -267,5 +273,13 @@ public class HomePage {
 
     public boolean validateRecookPageRecipeTab() {
         return recookRecipeTabPage.isDisplayed();
+    }
+
+    public void clickPostBtnTimelineTab() {
+        postBtnTimelineTab.click();
+    }
+
+    public boolean verifyPostPageTimelineTab() {
+        return postPageVerif.isDisplayed();
     }
 }
