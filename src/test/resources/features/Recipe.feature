@@ -6,7 +6,7 @@ Feature: Recipe
   Scenario: Create new recipe Input all field on recipe with valid value and unverified user from recipe page
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test10"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     Then pop-up should return message with "sign in has been successful"
@@ -51,7 +51,7 @@ Feature: Recipe
     Then validate title recipe is "Ayam bakar goreng"
     And validate "ADD TO CART" button is displayed
 
-  @Positive @TEST
+  @Positive
   Scenario: Edit post on recipe with valid value and verified user
     Given User already on Cookit landing page
     When user click sign in button
