@@ -37,6 +37,7 @@ public class Cooking {
     @And("User click submit button")
     public void userClickSubmitButton() throws InterruptedException {
         cookingPage.clickButtonCreateSubmit();
+        Thread.sleep(5000);
     }
 
     // READ

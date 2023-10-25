@@ -81,8 +81,8 @@ Feature: Cooking
     When User input comment on cooking post with "Hallow semuanya"
     Then User click submit button
 
-  @Positive @TEST
-  Scenario: Comment on someone cooking post
+  @Positive
+  Scenario: Like on someone cooking post
     Given User already on Cookit landing page
     When user click sign in button
     And user input username "test5"
@@ -91,4 +91,4 @@ Feature: Cooking
     Then pop-up should return message with "sign in has been successful"
     And User click timeline tab
     And User click first button comment cooking post
-    And Like on someone cooking post
+    Then Like on someone cooking post
