@@ -51,4 +51,10 @@ public class Search {
         Assert.assertTrue(searchPage.notAvailableSearchResult());
         Thread.sleep(2000);
     }
+
+    @Then("People contains word jamal not shown")
+    public void peopleContainsWordJamalNotShown() throws InterruptedException {
+        Assert.assertTrue(searchPage.notAvailableSearchResult());
+        Thread.sleep(2000);
+    }
 }
