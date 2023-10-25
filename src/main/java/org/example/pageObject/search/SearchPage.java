@@ -17,9 +17,6 @@ public class SearchPage {
     @FindBy(xpath = "//input[@placeholder='Search Cookit']")
     private WebElement searchFormMenu;
 
-//    @FindBy(xpath = "//button[.='Recipes']")
-//    private WebElement recipeTabSearchPage;
-
     @FindBy(xpath = "//button[.='People']")
     private WebElement peopleTabSearchPage;
 
