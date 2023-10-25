@@ -55,4 +55,8 @@ public class SearchPage {
         return availUserName.getText();
     }
 
+    public boolean notAvailableSearchResult() {
+        return notAvailRecipeNameAndUserName.isDisplayed();
+    }
+
 }

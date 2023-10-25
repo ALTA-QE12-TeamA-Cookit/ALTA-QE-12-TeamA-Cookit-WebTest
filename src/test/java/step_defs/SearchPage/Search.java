@@ -28,21 +28,27 @@ public class Search {
 
     @And("User click on search people tab")
     public void userClickOnSearchPeopleTab() throws InterruptedException {
-        Thread.sleep(500);
+        Thread.sleep(1000);
         searchPage.clickSearchPeopleTab();
         Thread.sleep(500);
     }
 
     @And("User input {string} on people search box")
     public void userInputOnPeopleSearchBox(String peopleName) throws InterruptedException {
-        Thread.sleep(500);
-        searchPage.searchInputUserName(peopleName);
         Thread.sleep(1000);
+        searchPage.searchInputUserName(peopleName);
+        Thread.sleep(500);
     }
 
     @Then("People contains word {string} has shown")
     public void peopleContainsWordHasShown(String peopleName) throws InterruptedException {
         Thread.sleep(2000);
         Assert.assertTrue(searchPage.verifyUserName().contains(peopleName));
+    }
+
+    @Then("Recipes contains word kerupuk not shown")
+    public void recipesContainsWordNotShown() throws InterruptedException {
+        Assert.assertTrue(searchPage.notAvailableSearchResult());
+        Thread.sleep(2000);
     }
 }
