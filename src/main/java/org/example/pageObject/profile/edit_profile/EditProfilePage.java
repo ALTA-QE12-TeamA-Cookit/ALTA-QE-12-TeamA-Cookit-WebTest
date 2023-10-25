@@ -5,18 +5,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class EditProfile {
+public class EditProfilePage {
     public static WebDriver webDriver;
 
-    public EditProfile(WebDriver driver) {
+    public EditProfilePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         webDriver = driver;
     }
 
+    @FindBy(xpath = "//button[@class=' text-primary place-self-end mb-24 text-2xl rounded-full']")
+    private WebElement buttonEditProfile;
+
     @FindBy(xpath = "//button[@class='justify-self-start text-2xl']")
     private WebElement buttonbackToHome;
 
-    @FindBy(xpath = "//input[@class='border-r border-l border-t border-b border-1 border-primary outline-none rounded-md px-2 py-1']")
+    @FindBy(css = "[type='text']")
     private WebElement inputUsername;
 
     @FindBy(xpath = "//textarea[@class='border-r border-l border-t border-b border-1 border-primary outline-none rounded-md px-2 py-1']")
@@ -40,27 +43,36 @@ public class EditProfile {
     @FindBy(id = "pict")
     private WebElement inputFileProfile;
 
+    public void clickEditProfileButton(){
+        buttonEditProfile.click();
+    }
+
     public void clickButtonBackToHome() {
         buttonbackToHome.click();
     }
 
     public void setInputUsername(String username) {
+        inputUsername.clear();
         inputUsername.sendKeys(username);
     }
 
     public void setInputBio(String bio) {
+        inputBio.clear();
         inputBio.sendKeys(bio);
     }
 
     public void setInputCurrentPw(String currentPw) {
+        inputCurrentPw.clear();
         inputCurrentPw.sendKeys(currentPw);
     }
 
     public void setInputNewPw(String newPw) {
+        inputNewPw.clear();
         inputNewPw.sendKeys(newPw);
     }
 
     public void setInputConfirmPw(String confirmPw) {
+        inputConfirmPw.clear();
         inputConfirmPw.sendKeys(confirmPw);
     }
 
