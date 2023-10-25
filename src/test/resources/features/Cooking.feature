@@ -16,7 +16,7 @@ Feature: Cooking
     And User click submit button
     Then pop-up should return message with "successfuly added new cooking"
 
-    @Negative
+  @Negative
   Scenario: Create new cooking with Input field text and input img with valid data and image more than 3MB on new cooking page
     Given User already on Cookit landing page
     When user click sign in button
@@ -57,6 +57,7 @@ Feature: Cooking
     And User click submit button
     Then pop-up should return message with "successfuly added new cooking"
 
+  @Negative
   Scenario: Create new cooking without any value on new cooking page
     Given User already on Cookit landing page
     When user click sign in button
