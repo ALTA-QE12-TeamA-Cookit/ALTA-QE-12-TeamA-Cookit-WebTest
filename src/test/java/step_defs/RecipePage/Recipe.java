@@ -161,4 +161,10 @@ public class Recipe {
         Thread.sleep(2000);
         Assert.assertEquals(recipePage.getTextProfileUserOnProfilePage(), username);
     }
+
+    @And("user click submit on recipe page")
+    public void userClickSubmitOnRecipePage() throws InterruptedException {
+        Thread.sleep(5000);
+        recipePage.clickButtonSubmit();
+    }
 }
