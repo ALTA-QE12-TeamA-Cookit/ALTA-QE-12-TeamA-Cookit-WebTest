@@ -44,6 +44,10 @@ public class CartPage {
     @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/*[name()='svg'][1]/*[name()='g'][1]/*[name()='path'][2]")
     private WebElement quantityProduct;
 
+//    User add reduce quantity item on cart page
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/p[1]")
+    private WebElement reduceProductQty;
+
 //    ============================================================================================
 
     //    user checkout item
@@ -94,5 +98,10 @@ public class CartPage {
 
     public boolean verifyQtyProduct() {
         return quantityProduct.isDisplayed();
+    }
+
+//    User add reduce quantity item on cart page
+    public void clickReduceQtyBtn() {
+        reduceProductQty.click();
     }
 }

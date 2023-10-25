@@ -61,7 +61,7 @@ public class Cart {
         Assert.assertEquals(cartPage.getPopUpTitleAlert(), message);
     }
 
-
+    //  add more quantity
     @And("User click plus icon for adding more quantity product")
     public void userClickPlusIconForAddingMoreQuantityProduct() {
         cartPage.addMoreQty();
@@ -70,5 +70,11 @@ public class Cart {
     @Then("quantity product change value")
     public void quantityProductChangeValue() {
         Assert.assertTrue(cartPage.verifyQtyProduct());
+    }
+
+    //  reduce quantity
+    @And("User click minus icon for adding more quantity product")
+    public void userClickMinusIconForAddingMoreQuantityProduct() {
+
     }
 }

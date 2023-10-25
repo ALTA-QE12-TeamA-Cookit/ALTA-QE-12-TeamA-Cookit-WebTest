@@ -39,3 +39,16 @@ Feature: CartPage
     Then User already on Cart page
     And User click plus icon for adding more quantity product
     Then quantity product change value
+
+  @positive
+  Scenario: User reduce quantity item on cart page
+    Given User already on Cookit landing page
+    When user click sign in button
+    And user input username "test5"
+    And input password "Test1234"
+    And click Log in button
+    And User click on Cart icon
+    Then User already on Cart page
+    And User click minus icon for adding more quantity product
+    Then quantity product change value
+
