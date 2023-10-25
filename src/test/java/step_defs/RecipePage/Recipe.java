@@ -26,7 +26,8 @@ public class Recipe {
 
 
     @And("user input recipe title with {string}")
-    public void userInputRecipeTitleWith(String title) {
+    public void userInputRecipeTitleWith(String title) throws InterruptedException {
+        Thread.sleep(2000);
         recipePage.setInputTitle(title);
     }
 

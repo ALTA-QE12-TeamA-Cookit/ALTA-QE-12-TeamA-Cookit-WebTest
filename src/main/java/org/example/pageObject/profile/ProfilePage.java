@@ -44,7 +44,7 @@ public class ProfilePage {
 
     @FindBy(css = ".max-w-xl div:nth-of-type(3) > .justify-self-start > .flex")
     private  WebElement buttonComment;
-//.max-w-xl div:nth-of-type(3) > .justify-self-start > .flex
+
     @FindBy(xpath = "//div[@class='flex justify-self-center']/button[.='0']")
     private WebElement buttonLike;
 
@@ -59,6 +59,9 @@ public class ProfilePage {
 
     @FindBy(xpath = "//button[@class='swal2-confirm swal2-styled swal2-default-outline']")
     private WebElement buttonConfirmDelete;
+
+    @FindBy(css = ".max-w-xl > div:nth-of-type(3) label")
+    private WebElement buttonMoreOnAnotherProfile;
 
     @FindBy(xpath = "//li[@class='block']")
     private WebElement buttonRecook;
@@ -99,7 +102,18 @@ public class ProfilePage {
     @FindBy(css = ".px-2 > div:nth-of-type(1) > .place-self-end")
     private WebElement buttonUnfollow;
 
+    @FindBy(xpath = "//button[@class='font-semibold']")
+    private WebElement textHeaderOnRecipePage;
+
     //Function
+
+    public boolean getTextHeaderOnRecipePage(){
+        return textHeaderOnRecipePage.isDisplayed();
+    }
+
+    public void clickButtonMoreOnProfile() {
+        buttonMoreOnAnotherProfile.click();
+    }
 
     public String getTextButtonFollow(){
         return buttonFollow.getText();

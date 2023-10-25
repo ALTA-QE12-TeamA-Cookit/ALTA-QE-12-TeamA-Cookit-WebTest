@@ -156,3 +156,18 @@ Feature: Profile
     When User click first profile on timeline
     And User click add to cart on profile page
     Then pop-up message should return "successfuly added to cart"
+
+  @positive @TEST
+  Scenario: Create recooked reciped from profile page
+    Given User already on Cookit landing page
+    When user click sign in button
+    And user input username "akoi2"
+    And input password "Akoi1234"
+    And click Log in button
+    Then pop-up should return message with "sign in has been successful"
+    When User click first profile on timeline
+    And User click button more on another profile page
+    And User click recooked button
+    And user input recipe title with "Sapi Goreng"
+    And User click submit button
+    Then Verify status recooked is displayed
