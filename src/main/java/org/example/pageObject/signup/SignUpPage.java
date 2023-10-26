@@ -44,11 +44,14 @@ public class SignUpPage {
     @FindBy(xpath = "//div[@class='block alert alert-error shadow-lg']//span[.='Please input your email, username and password..']")
     private WebElement registeredEmailSignUp;
 
-    @FindBy(xpath = "//p[contains(.,'At least 8 characters with no space')]")
-    private WebElement requirement1PasswordGreenSignUp;
-
     @FindBy(css = "div.px-2 > p:nth-of-type(1)")
-    private WebElement requirement1PasswordBlackSignUp;
+    private WebElement requirement1PasswordSignUp;
+
+    @FindBy(xpath = "//p[contains(.,'At least 1 upper case letter')]")
+    private WebElement requirement2PasswordSignUp;
+
+    @FindBy(xpath = "//p[contains(.,'At least 1 number')]")
+    private WebElement requirement3PasswordSignUp;
 
 
     public boolean verifyLandingPageDisplayed(){
@@ -90,10 +93,9 @@ public class SignUpPage {
         return registeredEmailSignUp.getText();
     }
 
-    public String verifyRequirement1blackSignUp(){
-        return requirement1PasswordGreenSignUp.getText();}
+    public boolean verifyReq1Displayed(){return requirement1PasswordSignUp.isDisplayed();}
 
-    public String verifyRequirement1greenSignUp(){return requirement1PasswordBlackSignUp.getText();}
+    public boolean verifyReq2Displayed(){return requirement2PasswordSignUp.isDisplayed();}
 
-
+    public boolean verifyReq3Displayed(){return requirement3PasswordSignUp.isDisplayed();}
 }

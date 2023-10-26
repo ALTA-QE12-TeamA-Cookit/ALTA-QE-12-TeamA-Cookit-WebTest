@@ -15,6 +15,8 @@ Feature:
       | username    | email                 | password    |
       | username100 | username100@email.com | Username100 |
 
+#    Please new input unique "<username>" and "<email>"!!!
+
   @negative
   Scenario Outline: Create user with registered username
     Given user on landing page
@@ -90,10 +92,11 @@ Feature:
     And user click sign up button
     And user input  "<username>", "<email>", "<password>"
     And click Sign up button
-    Then first condition password shouldn't be green text
+    Then first condition password should be shown
     Examples:
       | username | email | password |
       |          |       | User2    |
+
 
   Scenario Outline: Create user with lowercase password
     Given user on landing page
@@ -101,10 +104,11 @@ Feature:
     And user click sign up button
     And user input  "<username>", "<email>", "<password>"
     And click Sign up button
-    Then second condition password should be uncheck
+    Then second condition password should be shown
     Examples:
-      | username  | email               | password  |
-      | username2 | username1@email.com | Username2 |
+      | username | email | password  |
+      |          |       | username2 |
+
 
   Scenario Outline: Create user without number in password
     Given user on landing page
@@ -112,8 +116,7 @@ Feature:
     Then user click sign up button
     And user input  "<username>", "<email>", "<password>"
     And click Sign up button
-    Then third condition password should be uncheck"
+    Then third condition password should be shown
     Examples:
-      | username  | email               | password  |
-      | username2 | username1@email.com | Username2 |
-
+      | username | email | password |
+      |          |       | Username |

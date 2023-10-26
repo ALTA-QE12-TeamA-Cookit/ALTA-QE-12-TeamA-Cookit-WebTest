@@ -54,7 +54,7 @@ public class SignUp {
 
     @Then("pop-up return should be shown")
     public void popUpReturnShouldBeShown() {
-        WebDriverWait wait = new WebDriverWait(driver,5);
+        WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[@class='swal2-title']")));
         Assert.assertTrue(signUpPage.verifyPopUpSignUpPage());
     }
@@ -67,12 +67,20 @@ public class SignUp {
         Assert.assertEquals(signUpPage.errorRegisteredSignUp(), message);
     }
 
-    @Then("first condition password shouldn't be green text")
-    public void firstConditionPasswordShouldnTBeGreenText() {
-        Assert.assertEquals(signUpPage.verifyRequirement1blackSignUp(),signUpPage.verifyRequirement1blackSignUp());
+
+    @Then("first condition password should be shown")
+    public void firstConditionPasswordShouldBeShow() {
+        Assert.assertTrue(signUpPage.verifyReq1Displayed());
     }
 
-    @Then("second condition password should be uncheck")
-    public void secondConditionPasswordShouldBeUncheck() {
+    @Then("second condition password should be shown")
+    public void secondConditionPasswordShouldBeShow() {
+        Assert.assertTrue(signUpPage.verifyReq2Displayed());
+    }
+
+
+    @Then("third condition password should be shown")
+    public void thirdConditionPasswordShouldBeShow() {
+        Assert.assertTrue(signUpPage.verifyReq3Displayed());
     }
 }
