@@ -2,7 +2,7 @@
 Feature: Login
   As a user i want login to cookit page
 
-  @positive
+  @positive @test
   Scenario: Login With Valid Data
     Given User already on Cookit landing page
     When user click sign in button
