@@ -49,7 +49,7 @@ Feature: HomePage
           And input password "Test1234"
           And click Log in button
           And User click on profile icon
-          And User click on prifile menu button
+          And User click on profile menu button
           Then User already on profile page
 
       @Positive

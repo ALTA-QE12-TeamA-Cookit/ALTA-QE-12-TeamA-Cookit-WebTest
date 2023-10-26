@@ -78,8 +78,8 @@ public class Home {
         Thread.sleep(2000);
     }
 
-    @And("User click on prifile menu button")
-    public void userClickOnPrifileMenuButton() throws InterruptedException {
+    @And("User click on profile menu button")
+    public void userClickOnProfileMenuButton() throws InterruptedException {
         Thread.sleep(2000);
         homePage.clickProfileMenuBtn();
         Thread.sleep(2000);
