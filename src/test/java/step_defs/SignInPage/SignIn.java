@@ -8,7 +8,6 @@ import org.example.pageObject.SignInPage;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import step_defs.Hooks;
@@ -47,9 +46,14 @@ public class SignIn {
     }
 
     @Then("pop-up should return message with {string}")
-    public void popUpShouldReturnMessageWith(String message) throws InterruptedException {
+    public void popUpShouldReturnMessageWith(String message) {
         WebDriverWait w = new WebDriverWait(driver, 3);
         w.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h2[@id='swal2-title']")));
         Assert.assertEquals(signInPage.getSweetAlert(), message);
+    }
+
+    @Then("pop-up should be shown")
+    public void popUpShouldBeShown() {
+        Assert.assertTrue(signInPage.getAlertInputValid());
     }
 }
