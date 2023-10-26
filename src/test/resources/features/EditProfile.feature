@@ -155,8 +155,8 @@ Feature: Edit Profile
   Scenario: Request to be verified
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test100"
-    And input password "Test1234"
+    And user input username "test200"
+    And input password "1234"
     And click Log in button
     Then pop-up should return message with "sign in has been successful"
     When User click on Profile menu
