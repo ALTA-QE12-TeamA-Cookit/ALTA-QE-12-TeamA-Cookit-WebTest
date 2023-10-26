@@ -38,3 +38,12 @@ Feature: Login
     And input password "Username1"
     And click Log in button
     Then warning pop-up should shown
+
+  @Negative @test
+  Scenario: Log in with empty password
+    Given User already on Cookit landing page
+    When user click sign in button
+    And user input username "username1"
+    And  input password ""
+    And click Log in button
+    Then warning pop-up should shown
