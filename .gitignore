@@ -12,6 +12,7 @@ target/
 *.iml
 *.ipr
 /src/test/resources/images
+/src/test/java/step_defs/RunCukesTest.java
 
 ### Eclipse ###
 .apt_generated

@@ -1,22 +1,26 @@
 package org.example.pageObject.profile.edit_profile;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class EditProfile {
+public class EditProfilePage {
     public static WebDriver webDriver;
 
-    public EditProfile(WebDriver driver) {
+    public EditProfilePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         webDriver = driver;
     }
 
+    @FindBy(xpath = "//button[@class=' text-primary place-self-end mb-24 text-2xl rounded-full']")
+    private WebElement buttonEditProfile;
+
     @FindBy(xpath = "//button[@class='justify-self-start text-2xl']")
     private WebElement buttonbackToHome;
 
-    @FindBy(xpath = "//input[@class='border-r border-l border-t border-b border-1 border-primary outline-none rounded-md px-2 py-1']")
+    @FindBy(css = "[type='text']")
     private WebElement inputUsername;
 
     @FindBy(xpath = "//textarea[@class='border-r border-l border-t border-b border-1 border-primary outline-none rounded-md px-2 py-1']")
@@ -34,33 +38,50 @@ public class EditProfile {
     @FindBy(xpath = "//button[@class='w-24 lg:w-32 py-1 rounded-md place-self-center bg-secondary text-white']")
     private WebElement buttonSave;
 
-    @FindBy(xpath = "//button[@class='w-24 lg:w-32 py-1 rounded-md place-self-center bg-secondary text-white']")
+    @FindBy(xpath = "//*[@id=\"skills \"]/div/div/div/button")
     private WebElement buttonRequest;
+
+    @FindBy(xpath = "//input[@id='pict']")
+    private WebElement inputFileEditProfile;
 
     @FindBy(id = "pict")
     private WebElement inputFileProfile;
+
+    public void clickInputFileEditProfile(String pathFile){
+        ((JavascriptExecutor)webDriver).executeScript("arguments[0].setAttribute('style', 'visibility:visible'); arguments[0].setAttribute('style', 'display:block');arguments[0].classList.remove(hidden);", inputFileProfile);
+        inputFileProfile.sendKeys(pathFile);
+    }
+
+    public void clickEditProfileButton(){
+        buttonEditProfile.click();
+    }
 
     public void clickButtonBackToHome() {
         buttonbackToHome.click();
     }
 
     public void setInputUsername(String username) {
+        inputUsername.clear();
         inputUsername.sendKeys(username);
     }
 
     public void setInputBio(String bio) {
+        inputBio.clear();
         inputBio.sendKeys(bio);
     }
 
     public void setInputCurrentPw(String currentPw) {
+        inputCurrentPw.clear();
         inputCurrentPw.sendKeys(currentPw);
     }
 
     public void setInputNewPw(String newPw) {
+        inputNewPw.clear();
         inputNewPw.sendKeys(newPw);
     }
 
     public void setInputConfirmPw(String confirmPw) {
+        inputConfirmPw.clear();
         inputConfirmPw.sendKeys(confirmPw);
     }
 

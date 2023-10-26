@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MyPurchase {
+public class MyPurchasePage {
     public static WebDriver webDriver;
 
-    public MyPurchase(WebDriver driver) {
+    public MyPurchasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         webDriver = driver;
     }
@@ -18,6 +18,9 @@ public class MyPurchase {
     @FindBy(xpath = "//div[@class='w-10/12']")
     private WebElement buttonBackToHome;
 
+    @FindBy(css = ".dropdown.hidden li:nth-of-type(2)")
+    private WebElement buttonMyPurchase;
+
     @FindBy(xpath = "//button[@class='w-44 col-start-2 bg-primary place-self-end py-1 rounded-md text-white']")
     private WebElement buttonPay;
 
@@ -25,6 +28,10 @@ public class MyPurchase {
     private WebElement buttonCopyVA;
 
     // My Purhcase Function
+
+    public void clickButtonMyPurchase(){
+        buttonMyPurchase.click();
+    }
 
     public void clickButtonHome() {
         buttonBackToHome.click();
