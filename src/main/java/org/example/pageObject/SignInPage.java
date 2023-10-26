@@ -31,7 +31,7 @@ public class SignInPage {
     @FindBy(xpath = "//button[@class='w-full md:w-96 lg:w-full h-8 my-5 rounded-lg text-white font-semibold bg-orange-500']")
     private WebElement buttonLogin;
 
-    @FindBy(xpath = "//div[@class='block alert alert-error shadow-lg']//span[.='Please enter a valid username or password..']")
+    @FindBy(xpath = "//div[@class='block alert alert-error shadow-lg']/div[.='Please enter a valid username or password..']")
     private WebElement alertInvalidInput;
 
     public boolean verifyLandingPageTitle() {
@@ -61,4 +61,6 @@ public class SignInPage {
     public boolean alertDisplayed(){
         return alertInvalidInput.isDisplayed();
     }
+
+
 }

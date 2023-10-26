@@ -2,7 +2,7 @@
 Feature:
   As a user i want signup to cookit page
 
-  @positive
+  @Positive
   Scenario Outline: Create new user with valid data
     Given user on landing page
     When user click sign in buttons
@@ -17,7 +17,7 @@ Feature:
 
 #    Please new input unique "<username>" and "<email>"!!!
 
-  @negative
+  @Negative
   Scenario Outline: Create user with registered username
     Given user on landing page
     When user click sign in button
@@ -29,6 +29,7 @@ Feature:
       | username  | email               | password  | message  |
       | username1 | username2@email.com | Username2 | username already exist|
 
+  @Negative
   Scenario Outline: Create user with registered email
     Given user on landing page
     When user click sign in button
@@ -40,7 +41,7 @@ Feature:
       | username  | email               | password  | message       |
       | username2 | username1@email.com | Username2 | email already registered|
 
-
+  @Negative
   Scenario Outline: Create user with empty username
     Given user on landing page
     When user click sign in button
@@ -52,6 +53,7 @@ Feature:
       | username | email               | password  | message                                          |
       |          | username1@email.com | Username2 | Please input your email, username and password.. |
 
+  @Negative
   Scenario Outline: Create user with empty email
     Given user on landing page
     When user click sign in button
@@ -63,6 +65,7 @@ Feature:
       | username  | email | password  | message                                          |
       | username2 |       | Username2 | Please input your email, username and password.. |
 
+  @Negative
   Scenario Outline: Create user with empty password
     Given user on landing page
     When user click sign in button
@@ -74,6 +77,7 @@ Feature:
       | username  | email               | password | message                                          |
       | username2 | username1@email.com |          | Please input your email, username and password.. |
 
+  @Negative
   Scenario Outline: Create user with invalid format email
     Given user on landing page
     When user click sign in button
@@ -85,7 +89,7 @@ Feature:
       | username  | email              | password  | message |
       | username2 | username1email.com | Username2 | invalid email format|
 
-
+  @Negative
   Scenario Outline: Create user with password less than 8 char.
     Given user on landing page
     When user click sign in button
@@ -97,7 +101,7 @@ Feature:
       | username | email | password |
       |          |       | User2    |
 
-
+  @Negative
   Scenario Outline: Create user with lowercase password
     Given user on landing page
     When user click sign in button
@@ -109,7 +113,7 @@ Feature:
       | username | email | password  |
       |          |       | username2 |
 
-
+  @Negative
   Scenario Outline: Create user without number in password
     Given user on landing page
     When user click sign in button

@@ -42,7 +42,7 @@ public class ProfilePage {
 
     //General Object
 
-    @FindBy(css = ".max-w-xl div:nth-of-type(3) > .justify-self-start > .flex")
+    @FindBy(css = ".max-w-xl > div:nth-of-type(3) .justify-self-start > .flex")
     private  WebElement buttonComment;
 
     @FindBy(xpath = "//div[@class='flex justify-self-center']/button[.='0']")

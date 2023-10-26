@@ -52,7 +52,7 @@ public class SignIn {
         w.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h2[@id='swal2-title']")));
         Assert.assertEquals(signInPage.getSweetAlert(), message);
     }
-
+  
     @Then("warning pop-up should shown")
     public void warningPopUpShouldShown() {
         WebDriverWait wait = new WebDriverWait (driver, 3);
@@ -60,5 +60,4 @@ public class SignIn {
         Assert.assertTrue(signInPage.alertDisplayed());
         alert.dismiss();
     }
-
 }

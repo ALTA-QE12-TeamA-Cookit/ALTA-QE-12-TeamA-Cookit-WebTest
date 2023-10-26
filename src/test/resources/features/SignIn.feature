@@ -11,7 +11,6 @@ Feature: Login
     And click Log in button
     Then pop-up should return message with "sign in has been successful"
 
-
   @Negative @test
   Scenario: Log in with unregistered username
     Given User already on Cookit landing page

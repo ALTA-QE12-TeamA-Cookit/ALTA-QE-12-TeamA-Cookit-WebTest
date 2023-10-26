@@ -71,6 +71,12 @@ public class Profile {
     @Then("Verify user already on cooking page")
     public void verifyUserAlreadyOnCookingPage() throws InterruptedException {
         Thread.sleep(2000);
+        Assert.assertEquals(profilePage.getTextPostCategory(), "Post");
+    }
+
+    @Then("Verify user already on recipe page")
+    public void verifyUserAlreadyOnRecipePage() throws InterruptedException {
+        Thread.sleep(2000);
         Assert.assertEquals(profilePage.getTextPostCategory(), "Recipe");
     }
 

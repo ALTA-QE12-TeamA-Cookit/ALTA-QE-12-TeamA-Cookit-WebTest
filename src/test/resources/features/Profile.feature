@@ -56,7 +56,7 @@ Feature: Profile
     And User click more button on profile page
     And User click recook icon on profile page
     When User click submit button on recook page
-    Then Verify user already on cooking page
+    Then Verify user already on recipe page
 
   @Positive
   Scenario: Open another profile from profile page
