@@ -58,7 +58,7 @@ public class SignInPage {
         buttonLogin.click();
     }
 
-    public String getAlertInputValid(){
-        return alertInvalidInput.getText();
+    public boolean alertDisplayed(){
+        return alertInvalidInput.isDisplayed();
     }
 }
