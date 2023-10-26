@@ -48,7 +48,7 @@ public class SignIn {
     @Then("pop-up should return message with {string}")
     public void popUpShouldReturnMessageWith(String message) {
         WebDriverWait w = new WebDriverWait(driver, 3);
-        w.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='block alert alert-error shadow-lg']//span[.='Please input your email, username and password..']")));
+        w.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h2[@id='swal2-title']")));
         Assert.assertEquals(signInPage.getSweetAlert(), message);
     }
 

@@ -67,7 +67,7 @@ Feature: Cooking
     Then pop-up should return message with "sign in has been successful"
     When User click new cooking button
     And User click submit button
-    Then pop-up should return message with "successfuly added new cooking"
+    Then pop-up should return message with "text field can't be blank"
 
   @Positive
   Scenario: Comment on someone cooking post

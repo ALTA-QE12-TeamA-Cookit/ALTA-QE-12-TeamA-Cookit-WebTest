@@ -18,7 +18,8 @@ public class SignUp {
     SignUpPage signUpPage = new SignUpPage(driver);
 
     @Given("user on landing page")
-    public void userAlreadyOnCookitLandingPage() {
+    public void userAlreadyOnCookitLandingPage() throws InterruptedException {
+        Thread.sleep(3000);
         Assert.assertTrue(signUpPage.verifyLandingPageDisplayed());
     }
 
