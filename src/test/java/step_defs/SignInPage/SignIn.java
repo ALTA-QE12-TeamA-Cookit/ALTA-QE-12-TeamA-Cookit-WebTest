@@ -52,4 +52,8 @@ public class SignIn {
         Assert.assertEquals(signInPage.getSweetAlert(), message);
     }
 
+    @Then("pop-up should be shown")
+    public void popUpShouldBeShown() {
+        Assert.assertTrue(signInPage.getAlertInputValid());
+    }
 }
