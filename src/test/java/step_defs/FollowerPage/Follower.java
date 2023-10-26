@@ -14,6 +14,7 @@ public class Follower {
 
     FollowerPage followerPage = new FollowerPage(driver);
 
+//    follow another users
     @And("User click on profile menu buttons")
     public void userClickOnProfileMenuButtons() throws InterruptedException {
         Thread.sleep(2000);
@@ -44,4 +45,16 @@ public class Follower {
         Thread.sleep(1500);
     }
 
+//    unfollow users
+    @When("User click on Following tab")
+    public void userClickOnFollowingTab() throws InterruptedException {
+        Thread.sleep(2000);
+        followerPage.clickFollowingTabBtn();
+    }
+
+    @Then("User click on Unfollow Back button and refresh page")
+    public void userClickOnUnfollowBackButtonAndRefreshPage() throws InterruptedException {
+        Thread.sleep(2000);
+        followerPage.clickUnfollowUsersBtn();
+    }
 }

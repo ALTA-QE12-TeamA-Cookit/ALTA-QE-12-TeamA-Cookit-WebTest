@@ -17,7 +17,7 @@ public class FollowerPage {
 
 //    Page object
 
-//    followers
+//    follow another user
 
     @FindBy(xpath = "(//a[contains(.,'Profile')])[2]")
     private WebElement dropdownProfileMenuBtn;
@@ -33,11 +33,20 @@ public class FollowerPage {
     @FindBy(xpath = "//button[contains(.,'Friend')]")
     private WebElement friendText;
 
+
+//    unfollow user
+
+    @FindBy(xpath = "//p[contains(.,'Following')]")
+    private WebElement followingBtnTab;
+
+    @FindBy(xpath = "(//button[contains(.,'Unfollow')])[1]")
+    private WebElement unfollowUserBtn;
+
 //    ===================================================================================
 
 //    Function action
 
-//    followes
+//    follow another user
 
     public void clickDropdownProfileMenuBtn() {
         dropdownProfileMenuBtn.click();
@@ -60,4 +69,13 @@ public class FollowerPage {
         return friendText.getText();
     }
 
+    //    unfollow user
+
+    public void clickFollowingTabBtn() {
+        followingBtnTab.click();
+    }
+
+    public void clickUnfollowUsersBtn() {
+        unfollowUserBtn.click();
+    }
 }
