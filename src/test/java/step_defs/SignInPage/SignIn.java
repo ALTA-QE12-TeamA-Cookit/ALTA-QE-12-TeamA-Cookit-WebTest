@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.pageObject.SignInPage;
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -51,9 +52,12 @@ public class SignIn {
         w.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h2[@id='swal2-title']")));
         Assert.assertEquals(signInPage.getSweetAlert(), message);
     }
-
-    @Then("pop-up should be shown")
-    public void popUpShouldBeShown() {
-        Assert.assertTrue(signInPage.getAlertInputValid());
+  
+    @Then("warning pop-up should shown")
+    public void warningPopUpShouldShown() {
+        WebDriverWait wait = new WebDriverWait (driver, 3);
+        Alert alert = (Alert) wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='block alert alert-error shadow-lg']//span[.='Please enter a valid username or password..']")));
+        Assert.assertTrue(signInPage.alertDisplayed());
+        alert.dismiss();
     }
 }
