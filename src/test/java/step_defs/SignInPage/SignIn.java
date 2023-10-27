@@ -6,7 +6,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.pageObject.SignInPage;
 import org.junit.Assert;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -42,7 +41,8 @@ public class SignIn {
     }
 
     @And("click Log in button")
-    public void clickLogInButton() {
+    public void clickLogInButton() throws InterruptedException{
+        Thread.sleep(3000);
         signInPage.clickButtonLogin();
     }
 
@@ -54,10 +54,8 @@ public class SignIn {
     }
   
     @Then("warning pop-up should shown")
-    public void warningPopUpShouldShown() {
-        WebDriverWait wait = new WebDriverWait (driver, 3);
-        Alert alert = (Alert) wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='block alert alert-error shadow-lg']//span[.='Please enter a valid username or password..']")));
+    public void warningPopUpShouldShown() throws InterruptedException{
+        Thread.sleep(3000);
         Assert.assertTrue(signInPage.alertDisplayed());
-        alert.dismiss();
     }
 }
