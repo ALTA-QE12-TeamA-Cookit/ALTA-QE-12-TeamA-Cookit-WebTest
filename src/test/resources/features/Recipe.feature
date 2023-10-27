@@ -55,7 +55,7 @@ Feature: Recipe
   Scenario: Edit post on recipe with valid value and verified user
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     Then pop-up should return message with "sign in has been successful"
@@ -84,7 +84,7 @@ Feature: Recipe
   Scenario: Add to cart recipe from recipe page
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     Then pop-up should return message with "sign in has been successful"
@@ -99,7 +99,7 @@ Feature: Recipe
   Scenario: Verify like recipe is working properly from recipe page
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     Then pop-up should return message with "sign in has been successful"
@@ -112,7 +112,7 @@ Feature: Recipe
   Scenario: Verify comment recipe post from recipe page without img from recipe page
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     Then pop-up should return message with "sign in has been successful"
@@ -126,7 +126,7 @@ Feature: Recipe
   Scenario: Verify comment recipe post from recipe page with img
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     Then pop-up should return message with "sign in has been successful"
@@ -141,7 +141,7 @@ Feature: Recipe
   Scenario: Verify that profile redirect from recipe page to profile page is same
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     Then pop-up should return message with "sign in has been successful"
@@ -156,7 +156,7 @@ Feature: Recipe
   Scenario: Delete recipe post from recipe page
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     Then pop-up should return message with "sign in has been successful"
