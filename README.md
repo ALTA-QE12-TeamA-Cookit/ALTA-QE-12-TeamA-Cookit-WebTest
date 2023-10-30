@@ -44,8 +44,8 @@ Cookit is a web-based application that is useful for uploading, sharing and sell
 
 ## Team Cookit Quality Assurance Engineer 👨‍💻 :
 * [Alfian Aditya](https://github.com/alfianadityads) <br> [![GitHub](https://img.shields.io/badge/alfian-aditya-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/alfianadityads)
-* [Arif Laksonodhewo](https://github.com/faruqiizu) <br> [![GitHub](https://img.shields.io/badge/Arif-Laksonodhewo-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/OOOOAAAAEEEEEE)
-* [Ilham Muchsinin](https://github.com/fathiyahrr) <br> [![GitHub](https://img.shields.io/badge/Ilham-Muchsinin-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ilhm0)
+* [Arif Laksonodhewo](https://github.com/OOOOAAAAEEEEEE) <br> [![GitHub](https://img.shields.io/badge/Arif-Laksonodhewo-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/OOOOAAAAEEEEEE)
+* [Ilham Muchsinin](https://github.com/Ilhm0) <br> [![GitHub](https://img.shields.io/badge/Ilham-Muchsinin-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ilhm0)
 
 ## How to Run This Project:
 - Clone it
@@ -70,6 +70,6 @@ $ mvn clean verify
 
  <p align="right">(<a href="#top">back to top</a>)</p>
 <h3>
-<p align="center">Built with ❤️ by Cookit Team</p>
+<p align="center">Built with ❤️ by Cookit QA Team</p>
 <p align="center">©️ Oct 2023 </p>
 </h3>
