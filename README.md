@@ -3,7 +3,7 @@
 <summary><h1 style="display-inline:block">Cookit</h1></summary>
 Capstone Program Immersive Alterra Academy <br/>
 <a href="https://docs.google.com/spreadsheets/d/1jalK8ZModTTNZgAQgDxG7e5E-AFzRnRnpnJS7srMEJc/edit?pli=1#gid=195159117" target="blank"><img src="https://img.shields.io/badge/-Test%20Scenario-181717?style=for-the-badge&logo=microsoft-excel&color=fa9511&logoColor=white" /></a>
-<a href="https://docs.google.com/presentation/d/1cV6LjPO_fseBgi0L49n9EFeAcSd85rlUvXxgRnjT_Bo/edit#slide=id.g257206307a1_0_176" target="blank"><img src="https://img.shields.io/badge/-Presentation%20COOKIT_APP-181717?style=for-the-badge&logo=microsoft-PowerPoint&color=fa9511&logoColor=white" /></a>
+<a href="" target="blank"><img src="https://img.shields.io/badge/-Presentation%20COOKIT_APP-181717?style=for-the-badge&logo=microsoft-PowerPoint&color=fa9511&logoColor=white" /></a>
 <a href="https://cookit-immersive.netlify.app/" target="blank"><img src="https://img.shields.io/badge/-WEB%20COOKIT_APP-181717?style=for-the-badge&logo=swagger&color=fa9511&logoColor=white" /></a>
 
 
