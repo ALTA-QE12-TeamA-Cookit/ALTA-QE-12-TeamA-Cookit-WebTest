@@ -12,7 +12,7 @@ Feature: Cooking
     Then pop-up should return message with "sign in has been successful"
     When User click new cooking button
     And User input text field with "hallow selamat pagi"
-    And User input image with "C:\Users\arifl\Documents\!LearnJava\Unit 3\Alta-QE12-TeamA-Cookit-WebTest\src\test\resources\images\1.png"
+    And User input image with "C:\Users\AL\IntellijIdeaProject\Unit_3\Alta-QE12-TeamA-Cookit-WebTest\src\test\resources\images\2.jpeg"
     And User click submit button
     Then pop-up should return message with "successfuly added new cooking"
 
@@ -26,7 +26,7 @@ Feature: Cooking
     Then pop-up should return message with "sign in has been successful"
     When User click new cooking button
     And User input text field with "Selamat malam"
-    And User input image with "C:\Users\arifl\Documents\!LearnJava\Unit 3\Alta-QE12-TeamA-Cookit-WebTest\src\test\resources\images\More3MB.png"
+    And User input image with "C:\Users\AL\IntellijIdeaProject\Unit_3\Alta-QE12-TeamA-Cookit-WebTest\src\test\resources\images\More3MB.png"
     And User click submit button
     Then pop-up should return message with "Oops, file size more than 3MB"
 
@@ -40,7 +40,7 @@ Feature: Cooking
     Then pop-up should return message with "sign in has been successful"
     When User click new cooking button
     And User input text field with ""
-    And User input image with "C:\Users\arifl\Documents\!LearnJava\Unit 3\Alta-QE12-TeamA-Cookit-WebTest\src\test\resources\images\1.png"
+    And User input image with "C:\Users\AL\IntellijIdeaProject\Unit_3\Alta-QE12-TeamA-Cookit-WebTest\src\test\resources\images\1.png"
     And User click submit button
     Then pop-up should return message with "text field can't be blank"
 

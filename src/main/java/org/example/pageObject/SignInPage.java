@@ -1,9 +1,12 @@
 package org.example.pageObject;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SignInPage {
     public static WebDriver webDriver;
@@ -12,6 +15,8 @@ public class SignInPage {
         PageFactory.initElements(driver, this);
         webDriver = driver;
     }
+
+
 
     @FindBy(xpath = "//h2[@id='swal2-title']")
     private WebElement sweetAlertTitle;

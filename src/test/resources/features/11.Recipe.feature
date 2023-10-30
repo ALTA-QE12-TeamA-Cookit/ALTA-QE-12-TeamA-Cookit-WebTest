@@ -13,7 +13,7 @@ Feature: Recipe
     When User click new recipe button
     And user input recipe title with "Ayam bakar goreng"
     And user input description with "Ayam bakar goreng adalah ayam ya dibakar terus di goreng"
-    And user input image with "C:\Users\arifl\Documents\!LearnJava\Unit 3\Alta-QE12-TeamA-Cookit-WebTest\src\test\resources\images\3.jpeg"
+    And user input image with "C:\Users\AL\IntellijIdeaProject\Unit_3\Alta-QE12-TeamA-Cookit-WebTest\src\test\resources\images\1.png"
     And user input ingridient name with "Ayam"
     And user input quantity with "1"
     And user input unit with "potong"
@@ -36,7 +36,7 @@ Feature: Recipe
     When User click new recipe button
     And user input recipe title with "Ayam bakar goreng"
     And user input description with "Ayam bakar goreng adalah ayam ya dibakar terus di goreng"
-    And user input image with "C:\Users\arifl\Documents\!LearnJava\Unit 3\Alta-QE12-TeamA-Cookit-WebTest\src\test\resources\images\3.jpeg"
+    And user input image with "C:\Users\AL\IntellijIdeaProject\Unit_3\Alta-QE12-TeamA-Cookit-WebTest\src\test\resources\images\1.png"
     And user input ingridient name with "Ayam"
     And user input quantity with "1"
     And user input unit with "potong"
@@ -66,7 +66,7 @@ Feature: Recipe
     And User click edit post on recipe page
     And user input recipe title with "Ayam bakar goreng edit"
     And user input description with "Ayam bakar goreng adalah ayam ya dibakar terus di goreng edit"
-    And user input image with "C:\Users\arifl\Documents\!LearnJava\Unit 3\Alta-QE12-TeamA-Cookit-WebTest\src\test\resources\images\2.jpeg"
+    And user input image with "C:\Users\AL\IntellijIdeaProject\Unit_3\Alta-QE12-TeamA-Cookit-WebTest\src\test\resources\images\3.jpeg"
     And user input ingridient name with "Ayam"
     And user input quantity with "1"
     And user input unit with "potong"
@@ -134,7 +134,7 @@ Feature: Recipe
     And User click on Profile list menu
     And User click on recipe title on profile page
     When User input comment on text area as "Hallow semuanya"
-    And User input image with "C:\Users\arifl\Documents\!LearnJava\Unit 3\Alta-QE12-TeamA-Cookit-WebTest\src\test\resources\images\1.png"
+    And User input image with "C:\Users\AL\IntellijIdeaProject\Unit_3\Alta-QE12-TeamA-Cookit-WebTest\src\test\resources\images\2.jpeg"
     Then User click submit button
 
   @Positive
@@ -149,7 +149,7 @@ Feature: Recipe
     And User click on Profile list menu
     And User click on recipe title on profile page
     When User click on first profile page from recipe page
-    Then Username must be same with "test5"
+    Then Username must be same with "dummy3"
 
 
   @Positive

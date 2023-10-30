@@ -1,18 +1,18 @@
-@Login
-Feature: Login
+@SignIn
+Feature: Sign In
   As a user i want login to cookit page
 
   @positive
-  Scenario: Login With Valid Data
+  Scenario: Sign In With Valid Data
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     Then pop-up should return message with "sign in has been successful"
 
   @Negative
-  Scenario: Log in with unregistered username
+  Scenario: Sign In with unregistered username
     Given User already on Cookit landing page
     When user click sign in button
     And user input username "username10"
@@ -21,7 +21,7 @@ Feature: Login
     Then warning pop-up should shown
 
   @Negative
-  Scenario:Log in with wrong password
+  Scenario: Sign In with wrong password
     Given User already on Cookit landing page
     When user click sign in button
     And user input username "username10"
@@ -30,7 +30,7 @@ Feature: Login
     Then warning pop-up should shown
 
   @Negative
-  Scenario:Log in with empty username
+  Scenario: Sign In with empty username
     Given User already on Cookit landing page
     When user click sign in button
     And user input username ""
@@ -39,7 +39,7 @@ Feature: Login
     Then warning pop-up should shown
 
   @Negative
-  Scenario: Log in with empty password
+  Scenario: Sign In with empty password
     Given User already on Cookit landing page
     When user click sign in button
     And user input username "username1"

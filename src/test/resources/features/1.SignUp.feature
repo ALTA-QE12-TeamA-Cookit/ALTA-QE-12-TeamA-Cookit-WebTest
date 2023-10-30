@@ -1,5 +1,5 @@
 @Signup
-Feature:
+Feature: Sign Up
   As a user i want signup to cookit page
 
   @Positive
@@ -12,8 +12,8 @@ Feature:
     And click Sign up button
     Then pop-up return should be shown
     Examples:
-      | username    | email                 | password    |
-      | username100 | username100@email.com | Username100 |
+      | username     | email                  | password     |
+      | username1000 | username1000@email.com | Username1000 |
 
 #    Please new input unique "<username>" and "<email>"!!!
 

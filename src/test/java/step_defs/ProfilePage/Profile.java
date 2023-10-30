@@ -8,6 +8,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import step_defs.Hooks;
 import org.openqa.selenium.JavascriptExecutor;
 
@@ -19,27 +20,26 @@ public class Profile {
 
     @And("User click on Profile menu")
     public void userClickOnProfileMenu() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         profilePage.clickProfileSidebar();
     }
 
     @And("User click on Profile list menu")
-    public void userClickOnProfileListMenu() throws InterruptedException {
-        Thread.sleep(2000);
+    public void userClickOnProfileListMenu() {
         profilePage.clickLinkProfile();
     }
 
     @When("User click first button more on new cooking post")
     public void userClickFirstButtonMoreOnNewCookingPost() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         profilePage.clickButtonMore();
     }
 
     @And("User click Delete Post")
     public void userClickDeletePost() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         profilePage.clickButtonDelete();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         profilePage.clickButtonConfirmDelete();
     }
 
@@ -51,15 +51,15 @@ public class Profile {
 
     @And("User click like icon on profile page")
     public void userClickLikeIconOnProfilePage() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         profilePage.clickButtonLike();
     }
 
     @Then("Verify like value is {string}")
     public void verifyLikeValueIs(String like) throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         Assert.assertEquals(profilePage.getLikeCountOnProfilePage(), like);
-        Thread.sleep(2000);
+        Thread.sleep(1000);
     }
 
     @And("User click comment on profile page")
