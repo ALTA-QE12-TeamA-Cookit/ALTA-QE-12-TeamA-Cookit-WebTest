@@ -59,8 +59,7 @@ public class CookingPage {
 
     public void clickButtonNewPost() throws InterruptedException {
         Thread.sleep(3000);
-        WebDriverWait wait = new WebDriverWait(webDriver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(buttonNewPost)).click();
+        buttonNewPost.click();
         buttonNewCooking.click();
     }
 

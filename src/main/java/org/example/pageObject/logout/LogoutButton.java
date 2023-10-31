@@ -1,17 +1,14 @@
-package org.example.pageObject;
+package org.example.pageObject.logout;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class SignInPage {
+public class LogoutButton {
     public static WebDriver webDriver;
 
-    public SignInPage(WebDriver driver) {
+    public LogoutButton(WebDriver driver) {
         PageFactory.initElements(driver, this);
         webDriver = driver;
     }
@@ -36,8 +33,23 @@ public class SignInPage {
     @FindBy(xpath = "//button[@class='w-full md:w-96 lg:w-full h-8 my-5 rounded-lg text-white font-semibold bg-orange-500']")
     private WebElement buttonLogin;
 
-    @FindBy(xpath = "//div[@class='block alert alert-error shadow-lg']")
-    private WebElement alertInvalidInput;
+
+    @FindBy(xpath = "//div[@id='root']/div/div/div[12]/div/div/label/p")
+    private WebElement linkProfile;
+
+    @FindBy(xpath = "/html/body/div/div/div/div[12]/div/div/ul/li[3]")
+    private WebElement logOutButton;
+
+    @FindBy(xpath = "//h2[@class='swal2-title']")
+    private WebElement rUSureText;
+
+    @FindBy(xpath = "//button[@class='swal2-confirm swal2-styled swal2-default-outline']")
+    private WebElement yesButton;
+
+    @FindBy(xpath = "//h1[@class='font-bold text-3xl']")
+    private WebElement loginPage;
+
+
 
     public boolean verifyLandingPageTitle() {
         return landingPageTitle.isDisplayed();
@@ -63,9 +75,15 @@ public class SignInPage {
         buttonLogin.click();
     }
 
-    public boolean alertDisplayed(){
-        return alertInvalidInput.isDisplayed();
-    }
 
+    public void clickProfileMenu(){linkProfile.click();}
+
+    public void clikLogoutButton(){logOutButton.click();}
+
+    public boolean verifyTextOutDisplayed(){return rUSureText.isDisplayed();}
+
+    public void clickYesButton(){yesButton.click();}
+
+    public boolean verifyLoginPage(){return loginPage.isDisplayed();}
 
 }

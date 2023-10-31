@@ -5,7 +5,7 @@ Feature: CartPage
   Scenario: User checkout item
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     And User click on Cart icon
@@ -19,7 +19,7 @@ Feature: CartPage
   Scenario: User remove item on cart page
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     And User click on add to cart icon
@@ -32,7 +32,7 @@ Feature: CartPage
   Scenario: User add more quantity item on cart page
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     And User click on Cart icon
@@ -44,7 +44,7 @@ Feature: CartPage
   Scenario: User reduce quantity item on cart page
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     And User click on Cart icon
@@ -56,7 +56,7 @@ Feature: CartPage
   Scenario: User place order item on cart page
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     And User click on add to cart icon

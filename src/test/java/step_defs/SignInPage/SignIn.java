@@ -12,12 +12,16 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import step_defs.Hooks;
 
+import java.util.concurrent.TimeUnit;
+
 
 public class SignIn {
 
     private final WebDriver driver = Hooks.driver;
 
     SignInPage signInPage = new SignInPage(driver);
+
+    WebDriverWait wait = new WebDriverWait(driver, 10);
 
     @Given("User already on Cookit landing page")
     public void userAlreadyOnCookitLandingPage() throws InterruptedException {
@@ -47,13 +51,13 @@ public class SignIn {
 
     @Then("pop-up should return message with {string}")
     public void popUpShouldReturnMessageWith(String message) {
-        WebDriverWait w = new WebDriverWait(driver, 3);
-        w.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h2[@id='swal2-title']")));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h2[@id='swal2-title']")));
         Assert.assertEquals(signInPage.getSweetAlert(), message);
     }
-
-    @Then("pop-up should be shown")
-    public void popUpShouldBeShown() {
-        Assert.assertTrue(signInPage.getAlertInputValid());
+  
+    @Then("warning pop-up should shown")
+    public void warningPopUpShouldShown() throws InterruptedException{
+        Thread.sleep(3000);
+        Assert.assertTrue(signInPage.alertDisplayed());
     }
 }

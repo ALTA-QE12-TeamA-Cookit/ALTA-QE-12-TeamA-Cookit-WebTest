@@ -7,7 +7,7 @@ Feature: Profile
   Scenario: Delete new cooking post from profile page
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     Then pop-up should return message with "sign in has been successful"
@@ -21,7 +21,7 @@ Feature: Profile
   Scenario: Like new cooking post from profile page
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     Then pop-up should return message with "sign in has been successful"
@@ -34,7 +34,7 @@ Feature: Profile
   Scenario: Verify user already on cooking page
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     Then pop-up should return message with "sign in has been successful"
@@ -47,7 +47,7 @@ Feature: Profile
   Scenario: Create recooked reciped from profile page
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     Then pop-up should return message with "sign in has been successful"
