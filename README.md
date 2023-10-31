@@ -4,7 +4,7 @@
 Capstone Program Immersive Alterra Academy <br/>
 <a href="https://docs.google.com/spreadsheets/d/1jalK8ZModTTNZgAQgDxG7e5E-AFzRnRnpnJS7srMEJc/edit?pli=1#gid=195159117" target="blank"><img src="https://img.shields.io/badge/-Test%20Scenario-181717?style=for-the-badge&logo=microsoft-excel&color=fa9511&logoColor=white" /></a>
 <a href="" target="blank"><img src="https://img.shields.io/badge/-Presentation%20COOKIT_APP-181717?style=for-the-badge&logo=microsoft-PowerPoint&color=fa9511&logoColor=white" /></a>
-<a href="https://cookit-immersive.netlify.app/" target="blank"><img src="https://img.shields.io/badge/-WEB%20COOKIT_APP-181717?style=for-the-badge&logo=swagger&color=fa9511&logoColor=white" /></a>
+<a href="https://cookit-immersive.netlify.app/" target="blank"><img src="https://img.shields.io/badge/-WEB%20COOKIT_APP-181717?style=for-the-badge&logo=GoogleChrome&color=fa9511&logoColor=white" /></a>
 
 
 </div>
@@ -17,10 +17,9 @@ Cookit is a web-based application that is useful for uploading, sharing and sell
 - 🔎 [Automation Web](https://github.com/ALTA-QE12-TeamA-Cookit/ALTA-QE12-TeamA-Cookit-WebTest)
 
 
-## Report 🧪
 ## WEB AUTOMATION REPORT 🌐
 <div align="center">
-<img width="120%" src="./src/test/resources/files/report_web.png"><br/>
+<img width="120%" src="./src/test/resources/files/senario_web_report.png"><br/>
 </div>
 
 
@@ -29,7 +28,7 @@ Cookit is a web-based application that is useful for uploading, sharing and sell
 <p>Manual Testing</p>
       <a><img src="https://img.shields.io/badge/-Google%20Chrome-181717?style=for-the-badge&logo=GoogleChrome&color=fa9511&logoColor=white"></a>
       <p>Test Case Management</p>
-      <a><img src="https://img.shields.io/badge/-Google%20Spreadsheet-181717?style=for-the-badge&logo=GoogleChrome&color=fa9511&logoColor=white"></a>
+      <a><img src="https://img.shields.io/badge/-Google%20Spreadsheet-181717?style=for-the-badge&logo=microsoft-excel&color=fa9511&logoColor=white"></a>
       <p>Automation Testing</p>
       <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white">
       <img src="https://img.shields.io/badge/-Apache%20Maven-181717?style=for-the-badge&logo=Apache%20Maven&color=fa9511&logoColor=white">
@@ -43,9 +42,9 @@ Cookit is a web-based application that is useful for uploading, sharing and sell
 </div>
 
 ## Team Cookit Quality Assurance Engineer 👨‍💻 :
-* [Alfian Aditya](https://github.com/alfianadityads) <br> [![GitHub](https://img.shields.io/badge/alfian-aditya-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/alfianadityads)
-* [Arif Laksonodhewo](https://github.com/OOOOAAAAEEEEEE) <br> [![GitHub](https://img.shields.io/badge/Arif-Laksonodhewo-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/OOOOAAAAEEEEEE)
-* [Ilham Muchsinin](https://github.com/Ilhm0) <br> [![GitHub](https://img.shields.io/badge/Ilham-Muchsinin-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ilhm0)
+* [Alfian Aditya](https://github.com/alfianadityads) <br> [![GitHub](https://img.shields.io/badge/@alfianadityads-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/alfianadityads)
+* [Arif Laksonodhewo](https://github.com/OOOOAAAAEEEEEE) <br> [![GitHub](https://img.shields.io/badge/@OOOOAAAAEEEEEE-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/OOOOAAAAEEEEEE)
+* [Ilham Muchsinin](https://github.com/Ilhm0) <br> [![GitHub](https://img.shields.io/badge/@Ilhm0-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ilhm0)
 
 ## How to Run This Project:
 - Clone it
