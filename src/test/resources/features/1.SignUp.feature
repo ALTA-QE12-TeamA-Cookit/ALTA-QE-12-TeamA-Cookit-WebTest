@@ -12,8 +12,8 @@ Feature: Sign Up
     And click Sign up button
     Then pop-up return should be shown
     Examples:
-      | username     | email                  | password     |
-      | username1000 | username1000@email.com | Username1000 |
+      | username    | email                 | password  |
+      | username990 | username990@email.com | Username990 |
 
 #    Please new input unique "<username>" and "<email>"!!!
 
@@ -26,8 +26,8 @@ Feature: Sign Up
     And click Sign up button
     Then warning pop-up should be same with "<message>"
     Examples:
-      | username  | email               | password  | message  |
-      | username1 | username2@email.com | Username2 | username already exist|
+      | username  | email               | password  | message                |
+      | username990 | username2@email.com | Username2 | username already exist |
 
   @Negative
   Scenario Outline: Create user with registered email
@@ -38,8 +38,8 @@ Feature: Sign Up
     And click Sign up button
     Then warning pop-up should be same with "<message>"
     Examples:
-      | username  | email               | password  | message       |
-      | username2 | username1@email.com | Username2 | email already registered|
+      | username  | email                 | password  | message                  |
+      | username200 | username990@email.com | Username2 | email already registered |
 
   @Negative
   Scenario Outline: Create user with empty username
@@ -86,8 +86,8 @@ Feature: Sign Up
     And click Sign up button
     Then warning pop-up should be same with "<message>"
     Examples:
-      | username  | email              | password  | message |
-      | username2 | username1email.com | Username2 | invalid email format|
+      | username  | email              | password  | message              |
+      | username300 | username1email.com | Username2 | invalid email format |
 
   @Negative
   Scenario Outline: Create user with password less than 8 char.
@@ -98,8 +98,8 @@ Feature: Sign Up
     And click Sign up button
     Then first condition password should be shown
     Examples:
-      | username | email | password |
-      |          |       | User2    |
+      | username | email                   | password |
+      | username300 | usertigaratus@gmail.com | User2    |
 
   @Negative
   Scenario Outline: Create user with lowercase password
@@ -110,8 +110,8 @@ Feature: Sign Up
     And click Sign up button
     Then second condition password should be shown
     Examples:
-      | username | email | password  |
-      |          |       | username2 |
+      | username | email                    | password  |
+      | username400 | userempatratus@gmail.com | username2 |
 
   @Negative
   Scenario Outline: Create user without number in password
@@ -122,5 +122,5 @@ Feature: Sign Up
     And click Sign up button
     Then third condition password should be shown
     Examples:
-      | username | email | password |
-      |          |       | Username |
+      | username    | email                     | password |
+      | username500 | username500satu@gmail.com | Username |
