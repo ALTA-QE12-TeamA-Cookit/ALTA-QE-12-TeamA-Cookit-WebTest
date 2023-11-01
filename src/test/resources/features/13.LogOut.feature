@@ -2,7 +2,7 @@
 Feature: Log Out
   As a user i want to Log out may Account
 
-  @positive
+  @Positive
   Scenario: User want to log out account
     Given User already on Cookit page
     When User click on Sign In button

@@ -5,7 +5,7 @@ Feature: Search
   Scenario: User go to search page
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     And User click on Search icon
@@ -15,7 +15,7 @@ Feature: Search
   Scenario: User search available recipes on search page
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     And User click on Search icon
@@ -27,7 +27,7 @@ Feature: Search
   Scenario: User search available people on search page
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     And User click on Search icon
@@ -40,7 +40,7 @@ Feature: Search
   Scenario: User search unavailable recipes on search page
   Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     And User click on Search icon
@@ -52,7 +52,7 @@ Feature: Search
   Scenario: User search unavailable people on search page
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     And User click on Search icon

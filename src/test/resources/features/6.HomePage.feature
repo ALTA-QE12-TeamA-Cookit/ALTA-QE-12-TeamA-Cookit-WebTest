@@ -1,11 +1,11 @@
 @HomePage
 Feature: HomePage
 
-  @positive
+  @Positive
   Scenario: User go to timeline tab
   Given User already on Cookit landing page
   When user click sign in button
-  And user input username "test5"
+  And user input username "test6"
   And input password "Test1234"
   And click Log in button
   When User click on Timeline tab
@@ -15,7 +15,7 @@ Feature: HomePage
   Scenario: User go to recipe tab
   Given User already on Cookit landing page
   When user click sign in button
-  And user input username "test5"
+  And user input username "test6"
   And input password "Test1234"
   And click Log in button
   When User click on Recipes tab
@@ -25,7 +25,7 @@ Feature: HomePage
     Scenario: User go to recipes page
     Given User already on Cookit landing page
       When user click sign in button
-      And user input username "test5"
+      And user input username "test6"
       And input password "Test1234"
       And click Log in button
       When User click on Recipes name
@@ -35,7 +35,7 @@ Feature: HomePage
       Scenario: User go to search page
       Given User already on Cookit landing page
         When user click sign in button
-        And user input username "test5"
+        And user input username "test6"
         And input password "Test1234"
         And click Log in button
         And User click on Search icon
@@ -45,7 +45,7 @@ Feature: HomePage
         Scenario: User go to profile page
           Given User already on Cookit landing page
           When user click sign in button
-          And user input username "test5"
+          And user input username "test6"
           And input password "Test1234"
           And click Log in button
           And User click on profile icon
@@ -56,7 +56,7 @@ Feature: HomePage
       Scenario: User add item to cart
         Given User already on Cookit landing page
         When user click sign in button
-        And user input username "test5"
+        And user input username "test6"
         And input password "Test1234"
         And click Log in button
         And User click add to cart icon button on home page
@@ -66,7 +66,7 @@ Feature: HomePage
       Scenario: User go to cart page
         Given User already on Cookit landing page
         When user click sign in button
-        And user input username "test5"
+        And user input username "test6"
         And input password "Test1234"
         And click Log in button
         And User click on Cart icon
@@ -76,7 +76,7 @@ Feature: HomePage
       Scenario: User go to post page
         Given User already on Cookit landing page
         When user click sign in button
-        And user input username "test5"
+        And user input username "test6"
         And input password "Test1234"
         And click Log in button
         And User click on Timeline tab
@@ -87,7 +87,7 @@ Feature: HomePage
       Scenario: User go to add new cooking page
         Given User already on Cookit landing page
         When user click sign in button
-        And user input username "test5"
+        And user input username "test6"
         And input password "Test1234"
         And click Log in button
         And User click on new post button
@@ -98,7 +98,7 @@ Feature: HomePage
       Scenario: User go to add new recipes page
         Given User already on Cookit landing page
         When user click sign in button
-        And user input username "test5"
+        And user input username "test6"
         And input password "Test1234"
         And click Log in button
         And User click on new post button
@@ -109,7 +109,7 @@ Feature: HomePage
     Scenario: User like content in timeline tab on home page
       Given User already on Cookit landing page
       When user click sign in button
-      And user input username "test5"
+      And user input username "test6"
       And input password "Test1234"
       And click Log in button
       When User click on Timeline tab
@@ -120,7 +120,7 @@ Feature: HomePage
     Scenario: User comment content in timeline tab on home page
       Given User already on Cookit landing page
       When user click sign in button
-      And user input username "test5"
+      And user input username "test6"
       And input password "Test1234"
       And click Log in button
       When User click on Timeline tab
@@ -131,7 +131,7 @@ Feature: HomePage
     Scenario: User reply another content in timeline tab on home page
     Given User already on Cookit landing page
       When user click sign in button
-      And user input username "test5"
+      And user input username "test6"
       And input password "Test1234"
       And click Log in button
       When User click on Timeline tab
@@ -143,7 +143,7 @@ Feature: HomePage
     Scenario: User like content in recipes tab on home page
       Given User already on Cookit landing page
       When user click sign in button
-      And user input username "test5"
+      And user input username "test6"
       And input password "Test1234"
       And click Log in button
       And User click like icon recipes tab
@@ -153,7 +153,7 @@ Feature: HomePage
   Scenario: User comment content in recipes tab on home page
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     And User click comment icon recipes tab
@@ -163,7 +163,7 @@ Feature: HomePage
   Scenario: User reply another recipes in recipes tab on home page
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     And User click three dots icon recipe tab
@@ -174,7 +174,7 @@ Feature: HomePage
   Scenario: User recook another recipes in recipes tab on home page
     Given User already on Cookit landing page
     When user click sign in button
-    And user input username "test5"
+    And user input username "test6"
     And input password "Test1234"
     And click Log in button
     And User click three dots icon recipe tab

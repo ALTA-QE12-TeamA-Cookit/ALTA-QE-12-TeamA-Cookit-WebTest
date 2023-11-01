@@ -30,7 +30,7 @@ Feature: Profile
     And User click like icon on profile page
     Then Verify like value is "1"
 
-  @positive
+  @Positive
   Scenario: Verify user already on cooking page
     Given User already on Cookit landing page
     When user click sign in button

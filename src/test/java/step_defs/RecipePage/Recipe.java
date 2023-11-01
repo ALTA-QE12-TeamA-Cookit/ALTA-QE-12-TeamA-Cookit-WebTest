@@ -3,12 +3,10 @@ package step_defs.RecipePage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.pageObject.recipe.RecipePage;
+import app.netlify.cookit.pageObject.recipe.RecipePage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import step_defs.Hooks;
-
-import java.util.TreeMap;
 
 public class Recipe {
 

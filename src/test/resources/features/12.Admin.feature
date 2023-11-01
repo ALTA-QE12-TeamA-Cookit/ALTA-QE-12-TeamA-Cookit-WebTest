@@ -1,7 +1,7 @@
 @Admin
 Feature: Verify User
 
-  @positive
+  @Positive
   Scenario: Admin verify user on verify user page
     Given User already on Cookit landing page
     When user click sign in button

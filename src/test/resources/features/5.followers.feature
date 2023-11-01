@@ -1,7 +1,7 @@
 @Follower
 Feature: Follower Page
 
-  @positive
+  @Positive
   Scenario: User click follow back button on followers page
     Given User already on Cookit landing page
     When user click sign in button
@@ -16,7 +16,7 @@ Feature: Follower Page
     When User click on Follow Back button and refresh page
     Then Follow Back button text should change to "Friend"
 
-  @positive
+  @Positive
   Scenario: User click unfollow button on following page
     Given User already on Cookit landing page
     When user click sign in button

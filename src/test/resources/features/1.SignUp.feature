@@ -1,4 +1,4 @@
-@Signup
+@SignUp
 Feature: Sign Up
   As a user i want signup to cookit page
 

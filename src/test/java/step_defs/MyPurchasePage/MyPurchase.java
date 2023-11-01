@@ -2,7 +2,7 @@ package step_defs.MyPurchasePage;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import org.example.pageObject.my_purchase.MyPurchasePage;
+import app.netlify.cookit.pageObject.my_purchase.MyPurchasePage;
 import org.openqa.selenium.WebDriver;
 import step_defs.Hooks;
 

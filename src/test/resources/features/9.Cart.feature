@@ -1,7 +1,7 @@
 @Cart
 Feature: CartPage
 
-  @positive
+  @Positive
   Scenario: User checkout item
     Given User already on Cookit landing page
     When user click sign in button
@@ -15,7 +15,7 @@ Feature: CartPage
     And User click checkout button
     Then User already on payment page
 
-  @positive
+  @Positive
   Scenario: User remove item on cart page
     Given User already on Cookit landing page
     When user click sign in button
@@ -28,7 +28,7 @@ Feature: CartPage
     And User click remove item icon
     Then pop up with message "Delete has been successful" has shown
 
-  @positive
+  @Positive
   Scenario: User add more quantity item on cart page
     Given User already on Cookit landing page
     When user click sign in button
@@ -40,7 +40,7 @@ Feature: CartPage
     And User click plus icon for adding more quantity product
     Then quantity product change value
 
-  @positive
+  @Positive
   Scenario: User reduce quantity item on cart page
     Given User already on Cookit landing page
     When user click sign in button
@@ -52,7 +52,7 @@ Feature: CartPage
     And User click minus icon for adding more quantity product
     Then quantity product change value
 
-  @positive
+  @Positive
   Scenario: User place order item on cart page
     Given User already on Cookit landing page
     When user click sign in button
@@ -74,7 +74,7 @@ Feature: CartPage
     Then Pop up with message "Successfull Order" is shown
     And User redirect to detail purchase page
 
-  @positive
+  @Positive
   Scenario: User recieved the order on my purchase page
     Given User already on Cookit landing page
     When user click sign in button

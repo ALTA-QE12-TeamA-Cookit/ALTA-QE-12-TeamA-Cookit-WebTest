@@ -3,14 +3,10 @@ package step_defs.ProfilePage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.pageObject.profile.ProfilePage;
+import app.netlify.cookit.pageObject.profile.ProfilePage;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import step_defs.Hooks;
-import org.openqa.selenium.JavascriptExecutor;
 
 public class Profile {
 
