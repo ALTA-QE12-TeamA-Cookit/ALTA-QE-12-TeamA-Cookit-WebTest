@@ -3,15 +3,10 @@ package step_defs.CookingPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.pageObject.cooking.CookingPage;
+import org.cookit.pageObject.cooking.CookingPage;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import step_defs.Hooks;
-import utils.Constants;
 
 public class Cooking {
 

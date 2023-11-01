@@ -1,9 +1,7 @@
 package step_defs.EditProfilePage;
 
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
-import io.cucumber.messages.types.Hook;
-import org.example.pageObject.profile.edit_profile.EditProfilePage;
+import org.cookit.pageObject.profile.edit_profile.EditProfilePage;
 import org.openqa.selenium.WebDriver;
 import step_defs.Hooks;
 

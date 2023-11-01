@@ -1,12 +1,10 @@
 package step_defs.SearchPage;
 
-import io.cucumber.java.bs.A;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import org.example.pageObject.search.SearchPage;
+import org.cookit.pageObject.search.SearchPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import step_defs.Hooks;
 
 public class Search {
